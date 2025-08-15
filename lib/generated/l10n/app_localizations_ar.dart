@@ -19,4 +19,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get aboutMe => 'معلومات عني';
+
+  @override
+  String get walid => 'وليد';
 }

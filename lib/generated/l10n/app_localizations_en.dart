@@ -19,4 +19,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMe => 'About Me';
+
+  @override
+  String get walid => 'Walid';
 }

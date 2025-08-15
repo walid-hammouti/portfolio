@@ -120,6 +120,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'About Me'**
   String get aboutMe;
+
+  /// No description provided for @walid.
+  ///
+  /// In en, this message translates to:
+  /// **'Walid'**
+  String get walid;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

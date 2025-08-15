@@ -32,7 +32,7 @@ class SmallTextStyles implements AppTextStyle {
 
   @override
   TextStyle get bodyLgMedium =>
-      const TextStyle(fontSize: 12, fontWeight: FontWeight.w500);
+      const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 }
 
 class LargeTextStyles implements AppTextStyle {
