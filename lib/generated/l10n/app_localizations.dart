@@ -126,6 +126,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Walid'**
   String get walid;
+
+  /// No description provided for @mobileAppDeveloper.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile App Developer'**
+  String get mobileAppDeveloper;
+
+  /// No description provided for @mobileAppDeveloperDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.'**
+  String get mobileAppDeveloperDesc;
+
+  /// No description provided for @cooperationRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Cooperation Request'**
+  String get cooperationRequest;
+
+  /// No description provided for @hammoutiWalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Hammouti Walid'**
+  String get hammoutiWalid;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

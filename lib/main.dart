@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:portfolio/generated/l10n/app_localizations.dart';
-import 'package:portfolio/home_page.dart';
+import 'package:portfolio/features/home/presentation/home_page.dart';
 import 'package:portfolio/providers.dart';
 import 'package:portfolio/style/app_theme.dart';
 

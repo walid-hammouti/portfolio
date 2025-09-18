@@ -4,5 +4,9 @@
     "courses": "Cours",
     "blogs": "Blogs",
     "aboutMe": "À propos",
-    "walid": "Walid"
+    "walid": "Walid",
+    "mobileAppDeveloper": "Développeur d'applications mobiles",
+    "mobileAppDeveloperDesc": "Je suis un développeur d'applications mobiles avec plus de 5 ans d'expérience dans la création d'applications de haute qualité en utilisant Flutter et Dart. J'ai une passion pour la création d'applications innovantes et conviviales qui répondent aux besoins des utilisateurs.",
+    "cooperationRequest": "Demande de coopération",
+    "hammoutiWalid": "Hammouti Walid"
 }

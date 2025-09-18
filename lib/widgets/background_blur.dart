@@ -9,7 +9,7 @@ class BackgroundBlur extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: -(context.width / 2 / 2),
-      top: (-(context.width / 2 / 2)) + Insets.xxx1,
+      top: (-(context.width / 2 / 2)) + Insets.xxxl,
       child: Container(
         width: context.width / 2,
         height: context.width / 2,

@@ -22,4 +22,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get walid => 'وليد';
+
+  @override
+  String get mobileAppDeveloper => 'مطور تطبيقات موبايل';
+
+  @override
+  String get mobileAppDeveloperDesc => 'أنا مطور تطبيقات موبايل بخبرة تزيد عن 5 سنوات في تطوير تطبيقات عالية الجودة باستخدام Flutter و Dart. لدي شغف بإنشاء تطبيقات مبتكرة وسهلة الاستخدام تلبي احتياجات المستخدمين.';
+
+  @override
+  String get cooperationRequest => 'طلب تعاون';
+
+  @override
+  String get hammoutiWalid => 'حموتي وليد';
 }
