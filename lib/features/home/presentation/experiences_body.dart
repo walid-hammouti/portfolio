@@ -2,6 +2,7 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:portfolio/extensions.dart';
+import 'package:portfolio/widgets/home_title_subtitle.dart';
 import 'package:portfolio/widgets/styled_card.dart';
 
 const explen = 6.0;
@@ -10,7 +11,17 @@ const expPointsize = 16.0;
 class ExperiencesBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DesktopExperiencesBody();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HomeTitleSubtitle(
+          title: context.texts.techStack,
+          subtitle: context.texts.techStackDesc,
+        ),
+        const Gap(32),
+        context.isDesktop ? DesktopExperiencesBody() : PhoneExperiencesBody(),
+      ],
+    );
   }
 }
 
@@ -126,6 +137,47 @@ class DesktopExperiencesBody extends StatelessWidget {
   }
 }
 
+class PhoneExperiencesBody extends StatelessWidget {
+  const PhoneExperiencesBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [
+          ExperiencesItem(),
+          SizedBox(
+            height: 60,
+            child: DottedLine(
+              dashColor: Colors.white,
+              direction: Axis.vertical,
+            ), // DottedLine
+          ),
+          ExperiencesItem(),
+          SizedBox(
+            height: 60,
+            child: DottedLine(
+              dashColor: Colors.white,
+              direction: Axis.vertical,
+            ), // DottedLine
+          ),
+          ExperiencesItem(),
+          SizedBox(
+            height: 60,
+            child: DottedLine(
+              dashColor: Colors.white,
+              direction: Axis.vertical,
+            ), // DottedLine
+          ),
+          ExperiencesItem(),
+
+          // SizedBox
+        ],
+      ), // Column
+    ); // Center
+  }
+}
+
 const expwidth = 300.0;
 const expheight = 230.0;
 
@@ -135,6 +187,7 @@ class ExperiencesItem extends StatelessWidget {
     return StyledCard(
       height: expheight,
       width: expwidth,
+      borderEffect: true,
       child: Column(
         children: [
           Text(

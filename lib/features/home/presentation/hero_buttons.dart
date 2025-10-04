@@ -11,7 +11,7 @@ class LargeHeroButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        PrimaryButton(title: context.texts.courses),
+        PrimaryButton(title: context.texts.projects),
         Gap(Insets.xl),
         OutlineButton(title: context.texts.cooperationRequest),
       ],
@@ -28,7 +28,7 @@ class SmallHeroButtons extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          child: PrimaryButton(title: context.texts.courses),
+          child: PrimaryButton(title: context.texts.projects),
         ), // SizedBox
         Gap(Insets.xl),
         SizedBox(

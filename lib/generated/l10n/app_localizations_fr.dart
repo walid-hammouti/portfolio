@@ -12,7 +12,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get home => 'Accueil';
 
   @override
-  String get courses => 'Cours';
+  String get projects => 'Projets';
 
   @override
   String get blogs => 'Blogs';
@@ -34,4 +34,22 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get hammoutiWalid => 'Hammouti Walid';
+
+  @override
+  String get projectsdesc => 'Voici quelques-uns des projets sur lesquels j\'ai travaillé. Si vous souhaitez en savoir plus, n\'hésitez pas à me contacter.';
+
+  @override
+  String get techStack => 'Stack technique';
+
+  @override
+  String get techStackDesc => 'Voici quelques-unes des technologies et outils avec lesquels j\'ai de l\'expérience :';
+
+  @override
+  String get poweredByFlutter => 'Propulsé par Flutter';
+
+  @override
+  String get aboutmeTitle => 'Hammouti Walid, Développeur d\'applications et de ML';
+
+  @override
+  String get aboutmeDesc => 'Bonjour, je suis Hammouti Walid, un développeur d\'applications passionné et un enthousiaste de l\'IA d\'Algérie. J\'aime créer des applications intelligentes et conviviales qui combinent de belles interfaces Flutter avec la puissance de l\'apprentissage automatique. Je explore actuellement comment l\'IA peut améliorer les applications du monde réel - des systèmes intelligents aux outils d\'automatisation. Mon objectif est de créer des produits numériques qui rendent la vie plus facile, plus intelligente et plus connectée.';
 }

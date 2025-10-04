@@ -5,7 +5,7 @@ import 'package:portfolio/routes/app_routes.dart';
 class AppMenuList {
   static List<AppMenu> getItems(BuildContext context) => [
     AppMenu(title: context.texts.home, path: AppRoutes.home),
-    AppMenu(title: context.texts.courses, path: AppRoutes.courses),
+    AppMenu(title: context.texts.projects, path: AppRoutes.projects),
     AppMenu(title: context.texts.blogs, path: AppRoutes.blogs),
     AppMenu(title: context.texts.aboutMe, path: AppRoutes.aboutme),
   ];

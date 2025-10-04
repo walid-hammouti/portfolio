@@ -7,7 +7,7 @@ class AppTheme {
   AppTheme({required this.fontFamily});
   ThemeData get dark {
     return _getThemeData(
-      colorScheme: ColorScheme.light(
+      colorScheme: ColorScheme.dark(
         primary: AppColors.primaryColor,
         background: AppColors.darkBackgroundColor,
         surface: AppColors.gray[850]!,

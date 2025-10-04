@@ -5,7 +5,7 @@ import 'package:portfolio/widgets/seo_text.dart';
 import 'package:portfolio/widgets/styled_card.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
 
-class CourseItem extends StatelessWidget {
+class ProjectItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StyledCard(

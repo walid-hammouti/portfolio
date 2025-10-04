@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:portfolio/generated/l10n/app_localizations.dart';
 import 'package:portfolio/features/home/presentation/home_page.dart';
 import 'package:portfolio/providers.dart';
+import 'package:portfolio/routes/app_routes.dart';
 import 'package:portfolio/style/app_theme.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MainApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final local = ref.watch(appLocalProvider);
     final theme = ref.watch(appThemeProvider);
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -36,7 +37,7 @@ class MainApp extends ConsumerWidget {
       theme: AppTheme(fontFamily: getFontFamily(local.value ?? 'en')).light,
       themeMode: theme.value == 'dark' ? ThemeMode.dark : ThemeMode.light,
 
-      home: HomePage(),
+      routerConfig: AppRoute.router,
     );
   }
 

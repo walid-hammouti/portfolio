@@ -103,11 +103,11 @@ abstract class AppLocalizations {
   /// **'Home'**
   String get home;
 
-  /// No description provided for @courses.
+  /// No description provided for @projects.
   ///
   /// In en, this message translates to:
-  /// **'Courses'**
-  String get courses;
+  /// **'Projects'**
+  String get projects;
 
   /// No description provided for @blogs.
   ///
@@ -150,6 +150,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hammouti Walid'**
   String get hammoutiWalid;
+
+  /// No description provided for @projectsdesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Here are some of the projects I\'ve worked on. If you\'re interested in learning more, feel free to contact me.'**
+  String get projectsdesc;
+
+  /// No description provided for @techStack.
+  ///
+  /// In en, this message translates to:
+  /// **'Tech Stack'**
+  String get techStack;
+
+  /// No description provided for @techStackDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Here are some of the technologies and tools I have experience with:'**
+  String get techStackDesc;
+
+  /// No description provided for @poweredByFlutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Powered by Flutter'**
+  String get poweredByFlutter;
+
+  /// No description provided for @aboutmeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hammouti Walid, App & ML Developer'**
+  String get aboutmeTitle;
+
+  /// No description provided for @aboutmeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.'**
+  String get aboutmeDesc;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
