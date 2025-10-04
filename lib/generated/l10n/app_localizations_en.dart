@@ -27,7 +27,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mobileAppDeveloper => 'Mobile App Developer';
 
   @override
-  String get mobileAppDeveloperDesc => 'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.';
+  String get mobileAppDeveloperDesc =>
+      'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.';
 
   @override
   String get cooperationRequest => 'Cooperation Request';
@@ -36,13 +37,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get hammoutiWalid => 'Hammouti Walid';
 
   @override
-  String get projectsdesc => 'Here are some of the projects I\'ve worked on. If you\'re interested in learning more, feel free to contact me.';
+  String get projectsdesc =>
+      'Here are some of the projects I\'ve worked on. If you\'re interested in learning more, feel free to contact me.';
 
   @override
   String get techStack => 'Tech Stack';
 
   @override
-  String get techStackDesc => 'Here are some of the technologies and tools I have experience with:';
+  String get techStackDesc =>
+      'Here are some of the technologies and tools I have experience with:';
 
   @override
   String get poweredByFlutter => 'Powered by Flutter';
@@ -51,5 +54,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutmeTitle => 'Hammouti Walid, App & ML Developer';
 
   @override
-  String get aboutmeDesc => 'Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.';
+  String get aboutmeDesc =>
+      'Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.';
 }
