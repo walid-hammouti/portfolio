@@ -1,10 +1,13 @@
 #!/bin/bash
 set -e
 
-# --- Install Flutter SDK (with Dart 3.7.x) ---
+# --- Install Flutter SDK (Dart 3.7.x) ---
 echo "Downloading Flutter SDK (3.29.0-stable)..."
 curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.29.0-stable.tar.xz
 tar xf flutter_linux_3.29.0-stable.tar.xz
+
+# --- Fix Git "dubious ownership" issue ---
+git config --global --add safe.directory /vercel/path0/flutter
 
 # --- Add Flutter to PATH ---
 export PATH="$PATH:`pwd`/flutter/bin"
