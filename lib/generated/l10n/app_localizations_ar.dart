@@ -12,7 +12,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get home => 'الرئيسية';
 
   @override
-  String get projects => 'Projects';
+  String get projects => 'المشاريع';
 
   @override
   String get blogs => 'المدونات';
@@ -29,9 +29,6 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get mobileAppDeveloperDesc =>
       'أنا مطور تطبيقات موبايل بخبرة تزيد عن 5 سنوات في تطوير تطبيقات عالية الجودة باستخدام Flutter و Dart. لدي شغف بإنشاء تطبيقات مبتكرة وسهلة الاستخدام تلبي احتياجات المستخدمين.';
-
-  @override
-  String get cooperationRequest => 'طلب تعاون';
 
   @override
   String get hammoutiWalid => 'حموتي وليد';
@@ -56,4 +53,7 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get aboutmeDesc =>
       'مرحبًا، أنا حموتي وليد، مطور تطبيقات شغوف ومتحمس للذكاء الاصطناعي من الجزائر. أحب بناء تطبيقات ذكية وسهلة الاستخدام تجمع بين واجهات Flutter الجميلة وقوة التعلم الآلي. أنا أستكشف حاليًا كيف يمكن للذكاء الاصطناعي تحسين التطبيقات في العالم الحقيقي - من الأنظمة الذكية إلى أدوات الأتمتة. هدفي هو إنشاء منتجات رقمية تجعل الحياة أسهل وأكثر ذكاءً وترابطًا.';
+
+  @override
+  String get reachMe => 'تواصل معي';
 }

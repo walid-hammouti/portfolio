@@ -31,9 +31,6 @@ class AppLocalizationsFr extends AppLocalizations {
       'Je suis un développeur d\'applications mobiles avec plus de 5 ans d\'expérience dans la création d\'applications de haute qualité en utilisant Flutter et Dart. J\'ai une passion pour la création d\'applications innovantes et conviviales qui répondent aux besoins des utilisateurs.';
 
   @override
-  String get cooperationRequest => 'Demande de coopération';
-
-  @override
   String get hammoutiWalid => 'Hammouti Walid';
 
   @override
@@ -57,4 +54,7 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get aboutmeDesc =>
       'Bonjour, je suis Hammouti Walid, un développeur d\'applications passionné et un enthousiaste de l\'IA d\'Algérie. J\'aime créer des applications intelligentes et conviviales qui combinent de belles interfaces Flutter avec la puissance de l\'apprentissage automatique. Je explore actuellement comment l\'IA peut améliorer les applications du monde réel - des systèmes intelligents aux outils d\'automatisation. Mon objectif est de créer des produits numériques qui rendent la vie plus facile, plus intelligente et plus connectée.';
+
+  @override
+  String get reachMe => 'Contactez-moi';
 }

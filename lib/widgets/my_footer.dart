@@ -11,7 +11,11 @@ class MyFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: context.theme.appBarTheme.backgroundColor,
-      padding: EdgeInsets.all(context.insets.padding),
+      padding: EdgeInsets.only(
+        top: context.insets.padding,
+        right: context.insets.padding,
+        left: context.insets.padding,
+      ),
       child: Column(
         children: [
           context.isDesktop ? _DesktopFooter() : _PhoneFooter(),
@@ -22,6 +26,7 @@ class MyFooter extends StatelessWidget {
             '© 2024 HAMMOUTI Walid. All rights reserved.',
             style: context.textStyle.bodyMdMedium,
           ),
+          const Gap(8),
         ],
       ),
     );

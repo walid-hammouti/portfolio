@@ -31,9 +31,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.';
 
   @override
-  String get cooperationRequest => 'Cooperation Request';
-
-  @override
   String get hammoutiWalid => 'Hammouti Walid';
 
   @override
@@ -56,4 +53,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get aboutmeDesc =>
       'Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.';
+
+  @override
+  String get reachMe => 'Reach Me';
 }

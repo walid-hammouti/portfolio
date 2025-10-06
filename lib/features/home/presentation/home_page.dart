@@ -54,7 +54,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-
         // Footer section - centered but scrollable area is full width
       ],
     );

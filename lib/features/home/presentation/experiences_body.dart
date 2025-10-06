@@ -35,7 +35,7 @@ class DesktopExperiencesBody extends StatelessWidget {
           Center(
             child: Container(
               width: 3,
-              height: 170 * explen,
+              height: 220 * explen,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -49,88 +49,38 @@ class DesktopExperiencesBody extends StatelessWidget {
               ),
             ),
           ),
-          for (int i = 0; i < explen; i++) ...[
-            if (i.isEven)
-              Positioned(
-                top: i * 150,
-                left: 0,
-                right: 400,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ExperiencesItem(),
-                    SizedBox(
-                      width: 100,
-                      child: DottedLine(
-                        dashColor: context.colorScheme.onBackground,
-                      ),
-                    ),
-                    Container(
-                      width: expPointsize,
-                      height: expPointsize,
-                      decoration: BoxDecoration(
-                        color: context.colorScheme.onBackground.withOpacity(
-                          0.25,
-                        ),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                        child: Container(
-                          width: expPointsize / 2,
-                          height: expPointsize / 2,
+          PositionedExpirenceItem(
+            isRight: true,
+            top: 1,
+            title: 'Mobile Development',
+            texts: [
+              'Built cross-platform mobile apps using Flutter and Dart',
+              'Integrated Supabase for authentication and real-time database',
+              'Designed responsive light and dark themes for better UX',
+              'Used Cubit, BLoC, Provider, and Riverpod for scalable state management',
+            ],
+          ),
 
-                          decoration: BoxDecoration(
-                            color: context.colorScheme.onBackground,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            else
-              Positioned(
-                top: i * 150,
-                right: 0,
-                left: 400,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: expPointsize,
-                      height: expPointsize,
-                      decoration: BoxDecoration(
-                        color: context.colorScheme.onBackground.withOpacity(
-                          0.25,
-                        ),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                        child: Container(
-                          width: expPointsize / 2,
-                          height: expPointsize / 2,
+          PositionedExpirenceItem(
+            isRight: false,
+            top: 2,
+            title: 'AI & Machine Learning',
+            texts: [
+              'Currently learning and exploring machine learning techniques',
+              'Performing data analysis and preprocessing using pandas and NumPy',
+              'Visualizing datasets and model performance with Matplotlib',
+            ],
+          ),
 
-                          decoration: BoxDecoration(
-                            color: context.colorScheme.onBackground,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 100,
-                      child: DottedLine(
-                        dashColor: context.colorScheme.onBackground,
-                      ),
-                    ),
-                    ExperiencesItem(),
-                  ],
-                ),
-              ),
-          ],
+          PositionedExpirenceItem(
+            isRight: true,
+            top: 3,
+            title: 'Desktop Development',
+            texts: [
+              'Built a Student Management System using C and GTK3',
+              'Developed a Linear Algebra Calculator with Python and Tkinter',
+            ],
+          ),
         ],
       ),
     );
@@ -145,7 +95,15 @@ class PhoneExperiencesBody extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          ExperiencesItem(),
+          ExperiencesItem(
+            title: 'Mobile Development',
+            texts: [
+              'Built cross-platform mobile apps using Flutter and Dart',
+              'Integrated Supabase for authentication and real-time database',
+              'Designed responsive light and dark themes for better UX',
+              'Used Cubit, BLoC, Provider, and Riverpod for scalable state management',
+            ],
+          ),
           SizedBox(
             height: 60,
             child: DottedLine(
@@ -153,7 +111,14 @@ class PhoneExperiencesBody extends StatelessWidget {
               direction: Axis.vertical,
             ), // DottedLine
           ),
-          ExperiencesItem(),
+          ExperiencesItem(
+            title: 'AI & Machine Learning',
+            texts: [
+              'Currently learning and exploring machine learning techniques',
+              'Performing data analysis and preprocessing using pandas and NumPy',
+              'Visualizing datasets and model performance with Matplotlib',
+            ],
+          ),
           SizedBox(
             height: 60,
             child: DottedLine(
@@ -161,15 +126,13 @@ class PhoneExperiencesBody extends StatelessWidget {
               direction: Axis.vertical,
             ), // DottedLine
           ),
-          ExperiencesItem(),
-          SizedBox(
-            height: 60,
-            child: DottedLine(
-              dashColor: Colors.white,
-              direction: Axis.vertical,
-            ), // DottedLine
+          ExperiencesItem(
+            title: 'Desktop Development',
+            texts: [
+              'Built a Student Management System using C and GTK3',
+              'Developed a Linear Algebra Calculator with Python and Tkinter',
+            ],
           ),
-          ExperiencesItem(),
 
           // SizedBox
         ],
@@ -179,9 +142,94 @@ class PhoneExperiencesBody extends StatelessWidget {
 }
 
 const expwidth = 300.0;
-const expheight = 230.0;
+const expheight = 320.0;
+
+class PositionedExpirenceItem extends StatelessWidget {
+  const PositionedExpirenceItem({
+    required this.top,
+    super.key,
+    required this.title,
+    required this.texts,
+    required this.isRight,
+  });
+  final String title;
+  final List<String> texts;
+  final double top;
+  final bool isRight;
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: top * 240,
+      right: isRight ? 400 : 0,
+      left: isRight ? 0 : 400,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children:
+            isRight
+                ? [
+                  ExperiencesItem(title: title, texts: texts),
+                  SizedBox(
+                    width: 100,
+                    child: DottedLine(
+                      dashColor: context.colorScheme.onBackground,
+                    ),
+                  ),
+                  Container(
+                    width: expPointsize,
+                    height: expPointsize,
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.onBackground.withOpacity(0.25),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Container(
+                        width: expPointsize / 2,
+                        height: expPointsize / 2,
+                        decoration: BoxDecoration(
+                          color: context.colorScheme.onBackground,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ),
+                  ),
+                ]
+                : [
+                  Container(
+                    width: expPointsize,
+                    height: expPointsize,
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.onBackground.withOpacity(0.25),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Container(
+                        width: expPointsize / 2,
+                        height: expPointsize / 2,
+                        decoration: BoxDecoration(
+                          color: context.colorScheme.onBackground,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 100,
+                    child: DottedLine(
+                      dashColor: context.colorScheme.onBackground,
+                    ),
+                  ),
+                  ExperiencesItem(title: title, texts: texts),
+                ],
+      ),
+    );
+  }
+}
 
 class ExperiencesItem extends StatelessWidget {
+  const ExperiencesItem({required this.texts, required this.title, super.key});
+  final String title;
+  final List<String> texts;
   @override
   Widget build(BuildContext context) {
     return StyledCard(
@@ -191,18 +239,21 @@ class ExperiencesItem extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Experience Title',
+            title,
             style: context.textStyle.bodyLgBold.copyWith(
               color: context.colorScheme.onBackground,
             ),
           ),
+          const Gap(8),
+
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _ExperienceDescreptionItem(),
-                _ExperienceDescreptionItem(),
-                _ExperienceDescreptionItem(),
-                _ExperienceDescreptionItem(),
+                for (final text in texts) ...[
+                  _ExperienceDescreptionItem(text: text),
+                  const Gap(8),
+                ],
               ],
             ),
           ),
@@ -213,6 +264,9 @@ class ExperiencesItem extends StatelessWidget {
 }
 
 class _ExperienceDescreptionItem extends StatelessWidget {
+  const _ExperienceDescreptionItem({required this.text});
+  final String text;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -228,7 +282,7 @@ class _ExperienceDescreptionItem extends StatelessWidget {
         Gap(6),
         Expanded(
           child: Text(
-            'Experience description goes here',
+            text,
             style: context.textStyle.bodyMdMedium.copyWith(
               color: context.colorScheme.onSurface,
               fontWeight: FontWeight.w400,

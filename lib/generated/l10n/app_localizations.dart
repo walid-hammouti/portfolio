@@ -142,12 +142,6 @@ abstract class AppLocalizations {
   /// **'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.'**
   String get mobileAppDeveloperDesc;
 
-  /// No description provided for @cooperationRequest.
-  ///
-  /// In en, this message translates to:
-  /// **'Cooperation Request'**
-  String get cooperationRequest;
-
   /// No description provided for @hammoutiWalid.
   ///
   /// In en, this message translates to:
@@ -189,6 +183,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.'**
   String get aboutmeDesc;
+
+  /// No description provided for @reachMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Reach Me'**
+  String get reachMe;
 }
 
 class _AppLocalizationsDelegate

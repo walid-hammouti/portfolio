@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:portfolio/extensions.dart';
-import 'package:portfolio/style/app_size.dart';
 import 'package:portfolio/widgets/styled_button.dart';
 
 class LargeHeroButtons extends StatelessWidget {
@@ -9,13 +7,7 @@ class LargeHeroButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        PrimaryButton(title: context.texts.projects),
-        Gap(Insets.xl),
-        OutlineButton(title: context.texts.cooperationRequest),
-      ],
-    );
+    return Row(children: [PrimaryButton(title: context.texts.reachMe)]);
   }
 }
 
@@ -28,12 +20,7 @@ class SmallHeroButtons extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          child: PrimaryButton(title: context.texts.projects),
-        ), // SizedBox
-        Gap(Insets.xl),
-        SizedBox(
-          width: double.infinity,
-          child: OutlineButton(title: context.texts.cooperationRequest),
+          child: PrimaryButton(title: context.texts.reachMe),
         ), // SizedBox
       ],
     ); // Column
