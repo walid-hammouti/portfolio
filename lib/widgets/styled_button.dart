@@ -9,8 +9,8 @@ class PrimaryButton extends StatelessWidget {
   final String? projectlink;
   const PrimaryButton({super.key, required this.title, this.projectlink});
 
-  Future<void> _launchUrl() async {
-    final Uri url = Uri.parse(projectlink!);
+  Future<void> _launchUrl(String projectlink) async {
+    final Uri url = Uri.parse(projectlink);
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $projectlink');
     }
@@ -23,7 +23,7 @@ class PrimaryButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       onPressed: () {
-        _launchUrl();
+        _launchUrl(projectlink!);
       },
       child: Text(
         title,
