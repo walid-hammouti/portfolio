@@ -6,7 +6,7 @@
     "aboutMe": "À propos",
     "walid": "Walid",
     "mobileAppDeveloper": "Développeur d'applications mobiles",
-    "mobileAppDeveloperDesc": "Je suis un développeur d'applications mobiles avec plus de 5 ans d'expérience dans la création d'applications de haute qualité en utilisant Flutter et Dart. J'ai une passion pour la création d'applications innovantes et conviviales qui répondent aux besoins des utilisateurs.",
+    "mobileAppDeveloperDesc": "Je suis un développeur d'applications mobiles avec un an d'expérience dans le développement d'applications Flutter et Dart de haute qualité. J'aime créer des applications innovantes et conviviales qui résolvent de vrais problèmes pour les utilisateurs.",
     "cooperationRequest": "Demande de coopération",
     "hammoutiWalid": "Hammouti Walid",
     "projectsdesc": "Voici quelques-uns des projets sur lesquels j'ai travaillé. Si vous souhaitez en savoir plus, n'hésitez pas à me contacter.",
@@ -15,5 +15,8 @@
     "poweredByFlutter": "Propulsé par Flutter",
     "aboutmeTitle": "Hammouti Walid, Développeur d'applications et de ML",
     "aboutmeDesc": "Bonjour, je suis Hammouti Walid, un développeur d'applications passionné et un enthousiaste de l'IA d'Algérie. J'aime créer des applications intelligentes et conviviales qui combinent de belles interfaces Flutter avec la puissance de l'apprentissage automatique. Je explore actuellement comment l'IA peut améliorer les applications du monde réel - des systèmes intelligents aux outils d'automatisation. Mon objectif est de créer des produits numériques qui rendent la vie plus facile, plus intelligente et plus connectée.",
-    "reachMe": "Contactez-moi"
+    "reachMe": "Contactez-moi",
+    "welcometext": "Bienvenue dans mon portfolio ! ",
+    "herotitle": "Bonjour, je suis  ",
+        "hammouti": "Hammouti "
 }

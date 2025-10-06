@@ -1,5 +1,5 @@
 class Insets {
-  static const double maxwidth = 1280;
+  static const double maxwidth = 1400; // i have add 120
   static const double xxxl = 80;
   static const double xxl = 50;
   static const double xl = 24;

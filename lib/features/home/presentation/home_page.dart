@@ -16,15 +16,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double vh = MediaQuery.of(context).size.height;
+
     return AppScaffold(
       slivers: [
         SliverToBoxAdapter(
           child: Center(
-            // ← Center individual content section
             child: Container(
               constraints: BoxConstraints(
                 maxWidth: Insets.maxwidth,
-              ), // ← Content only constrained here
+                minHeight: vh - context.insets.appBarHeight, // 100vh
+              ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: context.insets.padding,
@@ -34,17 +36,19 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        SliverGap(context.insets.gap),
+
         // Courses section - centered but scrollable area is full width
         SliverToBoxAdapter(
           child: Center(
             child: Container(
-              constraints: BoxConstraints(maxWidth: Insets.maxwidth),
+              constraints: BoxConstraints(
+                maxWidth: Insets.maxwidth,
+                minHeight: vh - context.insets.appBarHeight,
+              ),
               child: HomeCoursesList(),
             ),
           ),
         ),
-        SliverGap(context.insets.gap),
         // Experiences section - centered but scrollable area is full width
         SliverToBoxAdapter(
           child: Center(

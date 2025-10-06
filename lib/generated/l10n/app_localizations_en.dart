@@ -28,7 +28,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mobileAppDeveloperDesc =>
-      'I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.';
+      'I am a mobile app developer with one year of experience in developing high-quality Flutter and Dart applications. I enjoy creating innovative, user-friendly apps that solve real problems for users.';
 
   @override
   String get hammoutiWalid => 'Hammouti Walid';
@@ -56,4 +56,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reachMe => 'Reach Me';
+
+  @override
+  String get welcometext => 'Welcome to my portfolio! ';
+
+  @override
+  String get herotitle => 'Hello, I\'m  ';
+
+  @override
+  String get hammouti => 'Hammouti ';
 }

@@ -6,7 +6,7 @@
     "aboutMe": "About Me",
     "walid": "Walid",
     "mobileAppDeveloper": "Mobile App Developer",
-    "mobileAppDeveloperDesc": "I am a mobile app developer with over 5 years of experience in building high-quality applications using Flutter and Dart. I have a passion for creating innovative and user-friendly apps that meet the needs of users.",
+    "mobileAppDeveloperDesc": "I am a mobile app developer with one year of experience in developing high-quality Flutter and Dart applications. I enjoy creating innovative, user-friendly apps that solve real problems for users.",
     "hammoutiWalid": "Hammouti Walid",
     "projectsdesc": "Here are some of the projects I've worked on. If you're interested in learning more, feel free to contact me.",
     "techStack": "Tech Stack",
@@ -14,5 +14,8 @@
     "poweredByFlutter": "Powered by Flutter",
     "aboutmeTitle" : "Hammouti Walid, App & ML Developer",
     "aboutmeDesc": "Hi, I’m Hammouti Walid, a passionate app developer and AI enthusiast from Algeria. I love building smart, user-friendly applications that combine beautiful Flutter interfaces with the power of machine learning. I’m currently exploring how AI can enhance real-world apps — from intelligent systems to automation tools. My goal is to create digital products that make life easier, smarter, and more connected.",
-    "reachMe": "Reach Me"
+    "reachMe": "Reach Me",
+    "welcometext":"Welcome to my portfolio! ",
+    "herotitle":"Hello, I'm  ",
+    "hammouti": "Hammouti "
 }

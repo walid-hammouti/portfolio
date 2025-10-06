@@ -15,13 +15,60 @@ class HeroTexts extends StatelessWidget {
               : CrossAxisAlignment.center,
       children: [
         SEOText(
-          context.texts.hammoutiWalid,
+          context.texts.welcometext,
           textAlign:
               context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
-          style: context.textStyle.titleLgBold.copyWith(
+          style: context.textStyle.titleMdMedium,
+          gradient: LinearGradient(
+            colors: [
+              context.colorScheme.onBackground,
+              context.colorScheme.primary,
+            ],
+          ),
+          textRendererStyle: TextRendererStyle.header2,
+        ),
+        Gap((Insets.md)),
+        SEOText(
+          context.texts.herotitle,
+          textAlign:
+              context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+          style: context.textStyle.titleXlBold.copyWith(
             color: context.colorScheme.onBackground,
           ),
+
           textRendererStyle: TextRendererStyle.header1,
+        ),
+        Row(
+          crossAxisAlignment:
+              context.isDesktopOrTablet
+                  ? CrossAxisAlignment.start
+                  : CrossAxisAlignment.center,
+          mainAxisAlignment:
+              context.isDesktopOrTablet
+                  ? MainAxisAlignment.start
+                  : MainAxisAlignment.center,
+          children: [
+            SEOText(
+              context.texts.hammouti,
+              textAlign:
+                  context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+              style: context.textStyle.titleXlBold.copyWith(
+                color: context.colorScheme.onBackground,
+              ),
+
+              textRendererStyle: TextRendererStyle.header1,
+            ),
+            SEOText(
+              context.texts.walid,
+              textAlign:
+                  context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+              style: context.textStyle.titleXlBold.copyWith(
+                color: context.colorScheme.primary,
+              ),
+
+              textRendererStyle: TextRendererStyle.header1,
+            ),
+          ],
         ), // SEOText
         Gap((Insets.xl)),
         SEOText(

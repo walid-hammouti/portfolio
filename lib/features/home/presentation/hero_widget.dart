@@ -10,11 +10,8 @@ import 'package:portfolio/widgets/powerd_by_flutter.dart';
 class HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const PoweredByFlutter(),
-        context.isDesktopOrTablet ? _LargeHero() : _SmallHero(),
-      ],
+    return Center(
+      child: context.isDesktopOrTablet ? _LargeHero() : _SmallHero(),
     );
   }
 }
@@ -42,15 +39,16 @@ class _LargeHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: HeroImage(), // BoxConstraints
-        ), // ConstrainedBox
-        Gap(Insets.xl),
+        // ConstrainedBox
         Expanded(
           flex: 2,
           child: Column(
             children: [HeroTexts(), Gap(Insets.xxl), LargeHeroButtons()],
           ),
+        ),
+        Gap(120),
+        Expanded(
+          child: HeroImage(), // BoxConstraints
         ),
       ],
     );
