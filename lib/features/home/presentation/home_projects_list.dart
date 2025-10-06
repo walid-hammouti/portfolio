@@ -16,7 +16,7 @@ class HomeCoursesList extends StatelessWidget {
           title: context.texts.projects,
           subtitle: context.texts.projectsdesc,
         ),
-        const Gap(32),
+        const Gap(44),
         context.isDesktop ? _HomeCoursesListDesktop() : _HomeCoursesListPhone(),
       ],
     );
@@ -77,7 +77,7 @@ class _HomeCoursesListPhone extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(
-              width: 240,
+              width: 300,
               child: ProjectItem(
                 projectlink: "https://riguelni-docs.vercel.app/",
                 image: "assets/images/app.png",
@@ -85,9 +85,10 @@ class _HomeCoursesListPhone extends StatelessWidget {
                 description:
                     "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
               ),
-            ), // SizedBox
+            ),
+            Gap(16), // SizedBox
             SizedBox(
-              width: 240,
+              width: 300,
               child: ProjectItem(
                 projectlink: "",
                 image: "assets/images/app.png",
@@ -95,9 +96,11 @@ class _HomeCoursesListPhone extends StatelessWidget {
                 description:
                     "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
               ),
-            ), // SizedBox
+            ),
+            Gap(16), // SizedBox
+            // SizedBox
             SizedBox(
-              width: 240,
+              width: 300,
               child: ProjectItem(
                 projectlink: "",
                 image: "assets/images/app.png",

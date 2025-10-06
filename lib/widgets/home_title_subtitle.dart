@@ -22,7 +22,7 @@ class HomeTitleSubtitle extends StatelessWidget {
         children: [
           SEOText(
             title,
-            style: context.textStyle.titleMdMedium.copyWith(
+            style: context.textStyle.homeTitleSubtitleLgBold.copyWith(
               color: context.colorScheme.onBackground,
             ),
             textRendererStyle: TextRendererStyle.header2,

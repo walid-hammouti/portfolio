@@ -24,7 +24,7 @@ class MyFooter extends StatelessWidget {
           const PoweredByFlutter(),
           const Gap(8),
           Text(
-            '© 2024 HAMMOUTI Walid. All rights reserved.',
+            '© 2025 HAMMOUTI Walid. All rights reserved.',
             style: context.textStyle.bodyMdMedium,
           ),
           const Gap(8),

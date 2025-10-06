@@ -21,7 +21,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get aboutMe => 'معلومات عني';
 
   @override
-  String get walid => 'وليد';
+  String get walid => ' وليد ';
 
   @override
   String get mobileAppDeveloper => 'مطور تطبيقات موبايل';
@@ -61,8 +61,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get welcometext => 'مرحبًا بكم في محفظتي! ';
 
   @override
-  String get herotitle => 'مرحبًا، أنا  ';
+  String get herotitle => 'السلام عليكم، أنا';
 
   @override
-  String get hammouti => ' حموتي';
+  String get hammouti => 'حموتي';
 }
