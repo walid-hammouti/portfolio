@@ -30,12 +30,36 @@ class _HomeCoursesListDesktop extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
       child: Row(
         children: [
-          Expanded(child: ProjectItem()),
+          Expanded(
+            child: ProjectItem(
+              projectlink: "https://riguelni-docs.vercel.app/",
+              image: "assets/images/app.png",
+              title: "Riguelni - Freelance platfrom",
+              description:
+                  "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+            ),
+          ),
           Gap(16),
-          Expanded(child: ProjectItem()),
+          Expanded(
+            child: ProjectItem(
+              projectlink: "",
+              image: "assets/images/app.png",
+              title: "Riguelni - Freelance platfrom",
+              description:
+                  "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+            ),
+          ),
           Gap(16),
 
-          Expanded(child: ProjectItem()),
+          Expanded(
+            child: ProjectItem(
+              projectlink: "",
+              image: "assets/images/app.png",
+              title: "Riguelni - Freelance platfrom",
+              description:
+                  "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+            ),
+          ),
         ],
       ),
     );
@@ -52,9 +76,36 @@ class _HomeCoursesListPhone extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            SizedBox(width: 240, child: ProjectItem()), // SizedBox
-            SizedBox(width: 240, child: ProjectItem()), // SizedBox
-            SizedBox(width: 240, child: ProjectItem()), // SizedBox
+            SizedBox(
+              width: 240,
+              child: ProjectItem(
+                projectlink: "https://riguelni-docs.vercel.app/",
+                image: "assets/images/app.png",
+                title: "Riguelni - Freelance platfrom",
+                description:
+                    "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+              ),
+            ), // SizedBox
+            SizedBox(
+              width: 240,
+              child: ProjectItem(
+                projectlink: "",
+                image: "assets/images/app.png",
+                title: "Riguelni - Freelance platfrom",
+                description:
+                    "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+              ),
+            ), // SizedBox
+            SizedBox(
+              width: 240,
+              child: ProjectItem(
+                projectlink: "",
+                image: "assets/images/app.png",
+                title: "Riguelni - Freelance platfrom",
+                description:
+                    "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+              ),
+            ), // SizedBox
           ],
         ), // Row
       ), // SingleChildScrollView

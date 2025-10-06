@@ -48,7 +48,13 @@ class ProjectPage extends StatelessWidget {
                     childAspectRatio: 0.8,
                   ),
                   itemBuilder: (context, index) {
-                    return ProjectItem();
+                    return ProjectItem(
+                      projectlink: "",
+                      image: "assets/images/app.png",
+                      title: "Riguelni - Freelance platfrom",
+                      description:
+                          "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+                    );
                   },
                   itemCount: 10,
                 ),
