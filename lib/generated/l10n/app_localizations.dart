@@ -124,6 +124,12 @@ abstract class AppLocalizations {
   /// **'About Me'**
   String get aboutMe;
 
+  /// No description provided for @contactme.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Me'**
+  String get contactme;
+
   /// No description provided for @walid.
   ///
   /// In en, this message translates to:

@@ -21,6 +21,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get aboutMe => 'À propos';
 
   @override
+  String get contactme => 'Contactez-moi';
+
+  @override
   String get walid => 'Walid';
 
   @override

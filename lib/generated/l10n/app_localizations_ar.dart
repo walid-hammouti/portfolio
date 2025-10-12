@@ -21,6 +21,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get aboutMe => 'معلومات عني';
 
   @override
+  String get contactme => ' تواصل معي';
+
+  @override
   String get walid => ' وليد ';
 
   @override

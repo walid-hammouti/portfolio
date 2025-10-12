@@ -21,6 +21,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutMe => 'About Me';
 
   @override
+  String get contactme => 'Contact Me';
+
+  @override
   String get walid => 'Walid';
 
   @override

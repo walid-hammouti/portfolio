@@ -8,6 +8,7 @@ class AppMenuList {
     AppMenu(title: context.texts.projects, path: AppRoutes.projects),
     AppMenu(title: context.texts.blogs, path: AppRoutes.blogs),
     AppMenu(title: context.texts.aboutMe, path: AppRoutes.aboutme),
+    AppMenu(title: context.texts.contactme, path: AppRoutes.contactme),
   ];
 }
 

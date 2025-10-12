@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/extensions.dart';
 import 'package:portfolio/style/app_colors.dart';
 import 'package:portfolio/widgets/seo_text.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
   final String? projectlink;
-  const PrimaryButton({super.key, required this.title, this.projectlink});
-
-  Future<void> _launchUrl(String projectlink) async {
-    final Uri url = Uri.parse(projectlink);
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $projectlink');
-    }
-  }
+  final VoidCallback? onPressed;
+  const PrimaryButton({
+    super.key,
+    required this.title,
+    this.projectlink,
+    this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,7 @@ class PrimaryButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       onPressed: () {
-        _launchUrl(projectlink!);
+        onPressed;
       },
       child: Text(
         title,
