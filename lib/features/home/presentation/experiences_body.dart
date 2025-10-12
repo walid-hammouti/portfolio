@@ -107,7 +107,7 @@ class PhoneExperiencesBody extends StatelessWidget {
           SizedBox(
             height: 60,
             child: DottedLine(
-              dashColor: Colors.white,
+              dashColor: context.colorScheme.onBackground,
               direction: Axis.vertical,
             ), // DottedLine
           ),
@@ -122,7 +122,7 @@ class PhoneExperiencesBody extends StatelessWidget {
           SizedBox(
             height: 60,
             child: DottedLine(
-              dashColor: Colors.white,
+              dashColor: context.colorScheme.onBackground,
               direction: Axis.vertical,
             ), // DottedLine
           ),

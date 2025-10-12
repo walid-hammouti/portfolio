@@ -53,7 +53,7 @@ class ProjectItem extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                PrimaryButton(title: "APK Install"),
+                PrimaryButton(title: "Try App"),
                 PrimaryButton(title: "Project link", projectlink: projectlink),
               ],
             ),
