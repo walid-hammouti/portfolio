@@ -26,6 +26,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   custom_lint: ^0.8.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_icons:
+  android: true
+  ios: true
+  web:
+    generate: true
+  image_path: "assets/images/Portfolio_icon.png"
 
 
 flutter:
