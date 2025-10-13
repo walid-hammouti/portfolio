@@ -157,7 +157,7 @@ abstract class AppLocalizations {
   /// No description provided for @projectsdesc.
   ///
   /// In en, this message translates to:
-  /// **'Here are some of the projects I\'ve worked on. If you\'re interested in learning more, feel free to contact me.'**
+  /// **'Here are some of the projects I\'ve worked on.'**
   String get projectsdesc;
 
   /// No description provided for @techStack.

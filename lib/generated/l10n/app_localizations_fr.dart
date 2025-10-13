@@ -38,7 +38,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get projectsdesc =>
-      'Voici quelques-uns des projets sur lesquels j\'ai travaillé. Si vous souhaitez en savoir plus, n\'hésitez pas à me contacter.';
+      'Voici quelques-uns des projets sur lesquels j\'ai travaillé.';
 
   @override
   String get techStack => 'Stack technique';

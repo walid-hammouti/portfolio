@@ -37,8 +37,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get hammoutiWalid => 'حموتي وليد';
 
   @override
-  String get projectsdesc =>
-      'فيما يلي بعض المشاريع التي عملت عليها. إذا كنت مهتمًا بمعرفة المزيد، فلا تتردد في الاتصال بي.';
+  String get projectsdesc => 'فيما يلي بعض المشاريع التي عملت عليها.';
 
   @override
   String get techStack => 'المهارات التقنية';
