@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Insets {
   static const double maxwidth = 1400; // i have add 120
   static const double xxxl = 80;
@@ -12,6 +14,8 @@ abstract class AppInsets {
   double get appBarHeight;
   double get cardPadding;
   double get gap;
+  double get contactmeImageSize;
+  double vh(BuildContext context) => MediaQuery.of(context).size.height;
 }
 
 class LargeInstes extends AppInsets {
@@ -23,6 +27,8 @@ class LargeInstes extends AppInsets {
   double get cardPadding => Insets.xl;
   @override
   double get gap => 120;
+  @override
+  double get contactmeImageSize => 320;
 }
 
 class SmallInsets extends AppInsets {
@@ -34,4 +40,6 @@ class SmallInsets extends AppInsets {
   double get cardPadding => Insets.md;
   @override
   double get gap => 72;
+  @override
+  double get contactmeImageSize => 240;
 }

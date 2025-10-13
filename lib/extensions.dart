@@ -12,9 +12,9 @@ extension StyledContent on BuildContext {
 
   ThemeData get theme => Theme.of(this);
   FormFactorType get formFactor {
-    if (width < 600) {
+    if (width < 650) {
       return FormFactorType.mobile;
-    } else if (width < 900) {
+    } else if (width < 1200) {
       return FormFactorType.tablet;
     } else {
       return FormFactorType.desktop;
@@ -25,6 +25,7 @@ extension StyledContent on BuildContext {
   bool get isTablet => formFactor == FormFactorType.tablet;
   bool get isDesktop => formFactor == FormFactorType.desktop;
   bool get isDesktopOrTablet => isTablet || isDesktop;
+  bool get isPhoneOrTablet => isTablet || isMobile;
 
   AppTextStyle get textStyle {
     switch (formFactor) {

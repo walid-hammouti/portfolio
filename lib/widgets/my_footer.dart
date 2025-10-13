@@ -38,7 +38,7 @@ class _DesktopFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [AppLogo(), Spacer(), LargeMenu(), Spacer(), _FooterLinks()],
+      children: [AppLogo(), Spacer(), LargeMenu(), Spacer(), FooterLinks()],
     );
   }
 }
@@ -46,15 +46,19 @@ class _DesktopFooter extends StatelessWidget {
 class _PhoneFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [AppLogo(), SmallMenu(), _FooterLinks()]);
+    return Column(children: [AppLogo(), SmallMenu(), FooterLinks()]);
   }
 }
 
-class _FooterLinks extends StatelessWidget {
+class FooterLinks extends StatelessWidget {
+  final bool? arefooterlinks;
+
+  const FooterLinks({super.key, this.arefooterlinks = true});
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment:
+          arefooterlinks! ? MainAxisAlignment.center : MainAxisAlignment.start,
       children: [
         _FooterLinkItem(
           icon: AppIcons.linkedin,

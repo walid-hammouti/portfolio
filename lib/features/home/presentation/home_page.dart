@@ -16,8 +16,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double vh = MediaQuery.of(context).size.height;
-
     return AppScaffold(
       slivers: [
         SliverToBoxAdapter(
@@ -25,7 +23,9 @@ class HomePage extends StatelessWidget {
             child: Container(
               constraints: BoxConstraints(
                 maxWidth: Insets.maxwidth,
-                minHeight: vh - context.insets.appBarHeight, // 100vh
+                minHeight:
+                    context.insets.vh(context) -
+                    context.insets.appBarHeight, // 100vh
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
@@ -43,7 +43,8 @@ class HomePage extends StatelessWidget {
             child: Container(
               constraints: BoxConstraints(
                 maxWidth: Insets.maxwidth,
-                minHeight: vh - context.insets.appBarHeight,
+                minHeight:
+                    context.insets.vh(context) - context.insets.appBarHeight,
               ),
               child: HomeCoursesList(),
             ),

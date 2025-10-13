@@ -20,9 +20,7 @@ class PrimaryButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
-      onPressed: () {
-        onPressed;
-      },
+      onPressed: onPressed,
       child: Text(
         title,
         style: TextStyle(
