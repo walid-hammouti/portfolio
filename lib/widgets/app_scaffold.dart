@@ -14,7 +14,11 @@ class AppScaffold extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          const BackgroundBlur(),
+          AnimatedDotsBackground(
+            dotCount: 60,
+            dotColor: context.colorScheme.primary,
+            dotSize: 3,
+          ),
           // =============================================
           // ORIGINAL CODE WITH SCROLL PROBLEM:
           // =============================================
