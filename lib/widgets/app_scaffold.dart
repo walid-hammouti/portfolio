@@ -15,7 +15,7 @@ class AppScaffold extends StatelessWidget {
       body: Stack(
         children: [
           AnimatedDotsBackground(
-            dotCount: 60,
+            dotCount: context.isDesktop ? 60 : 20,
             dotColor: context.colorScheme.primary,
             dotSize: 3,
           ),
