@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:portfolio/extensions.dart';
+import 'package:portfolio/routes/app_routes.dart';
 import 'package:portfolio/widgets/seo_text.dart';
 import 'package:portfolio/widgets/styled_button.dart';
 import 'package:portfolio/widgets/styled_card.dart';
@@ -21,43 +23,52 @@ class ProjectItem extends StatelessWidget {
   final String projectlink;
   @override
   Widget build(BuildContext context) {
-    return StyledCard(
-      child: AspectRatio(
-        aspectRatio: 0.7,
-        child: Column(
-          children: [
-            AspectRatio(
-              aspectRatio: 1.5,
-              child: Image.asset(image, fit: BoxFit.cover),
-            ),
-            Gap(24),
-            SEOText(
-              title,
-              style: context.textStyle.bodyLgBold.copyWith(
-                color: context.colorScheme.onBackground,
-              ),
-              textRendererStyle: TextRendererStyle.header4,
-            ),
-            Gap(8),
+    return InkWell(
+      highlightColor: Colors.transparent,
 
-            Expanded(
-              child: SEOText(
-                description,
-                style: context.textStyle.bodyMdMedium.copyWith(
-                  color: context.colorScheme.onSurface,
-                ),
-                maxlines: 4,
-                overflow: TextOverflow.ellipsis,
+      hoverColor: Colors.transparent,
+      onTap: () => context.push('${AppRoutes.projects}/flutter-ai'),
+      child: StyledCard(
+        child: AspectRatio(
+          aspectRatio: 0.7,
+          child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio: 1.5,
+                child: Image.asset(image, fit: BoxFit.cover),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                PrimaryButton(title: "Try App"),
-                PrimaryButton(title: "Project link", projectlink: projectlink),
-              ],
-            ),
-          ],
+              Gap(24),
+              SEOText(
+                title,
+                style: context.textStyle.bodyLgBold.copyWith(
+                  color: context.colorScheme.onBackground,
+                ),
+                textRendererStyle: TextRendererStyle.header4,
+              ),
+              Gap(8),
+
+              Expanded(
+                child: SEOText(
+                  description,
+                  style: context.textStyle.bodyMdMedium.copyWith(
+                    color: context.colorScheme.onSurface,
+                  ),
+                  maxlines: 4,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  PrimaryButton(title: "Try App"),
+                  PrimaryButton(
+                    title: "Project link",
+                    projectlink: projectlink,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
