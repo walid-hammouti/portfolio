@@ -51,7 +51,7 @@ class AppLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(context.texts.walid, style: context.textStyle.titleLgBold);
+    return Text(context.texts.walid, style: context.textStyle.appLogoLgBold);
   }
 }
 

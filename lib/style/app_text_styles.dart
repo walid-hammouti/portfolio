@@ -9,6 +9,7 @@ abstract class AppTextStyle {
   TextStyle get titleMdMedium;
   TextStyle get bodyLgBold;
   TextStyle get bodyLgMedium;
+  TextStyle get appLogoLgBold;
 }
 
 class SmallTextStyles implements AppTextStyle {
@@ -23,6 +24,8 @@ class SmallTextStyles implements AppTextStyle {
   @override
   TextStyle get titleLgBold =>
       const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+  TextStyle get appLogoLgBold =>
+      const TextStyle(fontSize: 24, fontFamily: "Great_Vibes");
   @override
   TextStyle get homeTitleSubtitleLgBold =>
       const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
@@ -55,6 +58,8 @@ class LargeTextStyles implements AppTextStyle {
   @override
   TextStyle get titleLgBold =>
       const TextStyle(fontSize: 40, fontWeight: FontWeight.bold);
+  TextStyle get appLogoLgBold =>
+      const TextStyle(fontSize: 40, fontFamily: "Great_Vibes");
   @override
   TextStyle get homeTitleSubtitleLgBold =>
       const TextStyle(fontSize: 36, fontWeight: FontWeight.bold);

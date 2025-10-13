@@ -55,6 +55,11 @@ flutter:
           weight: 500
         - asset: assets/fonts/BalooBhaijaan2-Regular.ttf
 
+    - family: Great_Vibes
+      fonts:
+        - asset: assets/fonts/GreatVibes-Regular.ttf
+        
+      
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
