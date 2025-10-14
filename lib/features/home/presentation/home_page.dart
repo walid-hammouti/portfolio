@@ -50,11 +50,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
+        SliverGap(100),
         // Experiences section - centered but scrollable area is full width
         SliverToBoxAdapter(
           child: Center(
             child: Container(
-              constraints: BoxConstraints(maxWidth: Insets.maxwidth),
+              constraints: BoxConstraints(
+                maxWidth: Insets.maxwidth,
+                minHeight:
+                    context.insets.vh(context) - context.insets.appBarHeight,
+              ),
               child: ExperiencesBody(),
             ),
           ),
