@@ -19,5 +19,7 @@
     "reachMe": "Contactez-moi",
     "welcometext": "Bienvenue dans mon portfolio ! ",
     "herotitle": "Bonjour, je suis  ",
-        "hammouti": "Hammouti "
+    "hammouti": "Hammouti ",
+    "experince": "Expérience et compétences",
+    "experincedesc": "Un aperçu de mon expérience dans différents domaines de développement - du mobile à l'IA."
 }

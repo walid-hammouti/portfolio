@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/extensions.dart';
-import 'package:portfolio/features/course/presentation/project_item.dart';
+import 'package:portfolio/features/project/presentation/project_item.dart';
 import 'package:portfolio/style/app_size.dart';
 import 'package:portfolio/widgets/app_scaffold.dart';
 

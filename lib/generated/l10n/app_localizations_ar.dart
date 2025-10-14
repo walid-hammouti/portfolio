@@ -37,14 +37,18 @@ class AppLocalizationsAr extends AppLocalizations {
   String get hammoutiWalid => 'حموتي وليد';
 
   @override
-  String get projectsdesc => 'فيما يلي بعض المشاريع التي عملت عليها.';
-
-  @override
   String get techStack => 'المهارات التقنية';
 
   @override
   String get techStackDesc =>
       'فيما يلي بعض التقنيات والأدوات التي لدي خبرة بها:';
+
+  @override
+  String get experince => 'الخبرة والمهارات';
+
+  @override
+  String get experincedesc =>
+      'نظرة على خبرتي عبر مجالات تطوير مختلفة - من الموبايل إلى الذكاء الاصطناعي.';
 
   @override
   String get poweredByFlutter => 'مدعوم من Flutter';

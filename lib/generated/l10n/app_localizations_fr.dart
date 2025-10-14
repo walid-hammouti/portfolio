@@ -37,15 +37,18 @@ class AppLocalizationsFr extends AppLocalizations {
   String get hammoutiWalid => 'Hammouti Walid';
 
   @override
-  String get projectsdesc =>
-      'Voici quelques-uns des projets sur lesquels j\'ai travaillé.';
-
-  @override
   String get techStack => 'Stack technique';
 
   @override
   String get techStackDesc =>
       'Voici quelques-unes des technologies et outils avec lesquels j\'ai de l\'expérience :';
+
+  @override
+  String get experince => 'Expérience et compétences';
+
+  @override
+  String get experincedesc =>
+      'Un aperçu de mon expérience dans différents domaines de développement - du mobile à l\'IA.';
 
   @override
   String get poweredByFlutter => 'Propulsé par Flutter';

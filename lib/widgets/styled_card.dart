@@ -22,32 +22,51 @@ class StyledCard extends StatefulWidget {
 }
 
 class _StyledCardState extends State<StyledCard> {
+  bool isHovered = false;
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        if (widget.borderEffect) ...[
-          _BorderShadow(),
-          Positioned(bottom: 0, right: 0, child: _BorderShadow()), // Container
-        ],
-        Container(
-          width: widget.width,
-          height: widget.height,
-          padding: widget.padding ?? EdgeInsets.all(context.insets.cardPadding),
-          decoration: BoxDecoration(
-            color: context.colorScheme.surface,
-            border: Border.all(color: context.colorScheme.outline),
-            borderRadius: widget.borderRadius ?? BorderRadius.circular(24),
-          ),
-          child: widget.child,
+    return MouseRegion(
+      onEnter: (_) => setState(() => isHovered = true),
+      onExit: (_) => setState(() => isHovered = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        curve: Curves.easeOut,
+        transform: Matrix4.translationValues(0, isHovered ? -8 : 0, 0),
+        child: Stack(
+          children: [
+            if (widget.borderEffect || isHovered) ...[
+              _BorderShadow(),
+              Positioned(bottom: 0, right: 0, child: _BorderShadow()),
+            ],
+            Container(
+              width: widget.width,
+              height: widget.height,
+              padding:
+                  widget.padding ?? EdgeInsets.all(context.insets.cardPadding),
+              decoration: BoxDecoration(
+                color: context.colorScheme.surface,
+                border: Border.all(color: context.colorScheme.outline),
+                borderRadius: widget.borderRadius ?? BorderRadius.circular(24),
+                boxShadow: [
+                  if (isHovered)
+                    BoxShadow(
+                      color: context.colorScheme.primary.withOpacity(0.3),
+                      blurRadius: 20,
+                      offset: const Offset(0, 8),
+                    ),
+                ],
+              ),
+              child: widget.child,
+            ),
+            if (widget.borderEffect || isHovered)
+              CustomPaint(
+                size: Size(widget.width ?? 0, widget.height ?? 0),
+                painter: CurvedLinePainter(color: context.colorScheme.primary),
+              ),
+          ],
         ),
-        if (widget.borderEffect) ...[
-          CustomPaint(
-            size: Size(widget.width ?? 0, widget.height ?? 0),
-            painter: CurvedLinePainter(color: context.colorScheme.primary),
-          ),
-        ],
-      ],
+      ),
     );
   }
 }

@@ -154,12 +154,6 @@ abstract class AppLocalizations {
   /// **'Hammouti Walid'**
   String get hammoutiWalid;
 
-  /// No description provided for @projectsdesc.
-  ///
-  /// In en, this message translates to:
-  /// **'Here are some of the projects I\'ve worked on.'**
-  String get projectsdesc;
-
   /// No description provided for @techStack.
   ///
   /// In en, this message translates to:
@@ -171,6 +165,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Here are some of the technologies and tools I have experience with:'**
   String get techStackDesc;
+
+  /// No description provided for @experince.
+  ///
+  /// In en, this message translates to:
+  /// **'Experience & Skills'**
+  String get experince;
+
+  /// No description provided for @experincedesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A look at my experience across different development fields — from mobile to AI.'**
+  String get experincedesc;
 
   /// No description provided for @poweredByFlutter.
   ///

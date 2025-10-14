@@ -15,8 +15,8 @@ class ExperiencesBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         HomeTitleSubtitle(
-          title: context.texts.techStack,
-          subtitle: context.texts.techStackDesc,
+          title: context.texts.experince,
+          subtitle: context.texts.experincedesc,
         ),
         const Gap(32),
         context.isDesktop ? DesktopExperiencesBody() : PhoneExperiencesBody(),

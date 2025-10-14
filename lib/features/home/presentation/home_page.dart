@@ -4,7 +4,7 @@ import 'package:portfolio/extensions.dart';
 import 'package:portfolio/features/home/presentation/experiences_body.dart';
 import 'package:portfolio/features/home/presentation/hero_images.dart';
 import 'package:portfolio/features/home/presentation/hero_widget.dart';
-import 'package:portfolio/features/home/presentation/home_projects_list.dart';
+import 'package:portfolio/features/home/presentation/home_TechStack_list.dart';
 import 'package:portfolio/style/app_size.dart';
 import 'package:portfolio/widgets/app_scaffold.dart';
 import 'package:portfolio/widgets/background_blur.dart';
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                 minHeight:
                     context.insets.vh(context) - context.insets.appBarHeight,
               ),
-              child: HomeCoursesList(),
+              child: HomeTechstackList(),
             ),
           ),
         ),

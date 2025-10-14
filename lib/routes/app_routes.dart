@@ -3,9 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:portfolio/features/aboutme/presentation/aboutme_page.dart';
 import 'package:portfolio/features/blog/presentation/blog_page.dart';
 import 'package:portfolio/features/contactme/presentation/contactMe_page.dart';
-import 'package:portfolio/features/course/presentation/project_page.dart';
+import 'package:portfolio/features/project/presentation/project_page.dart';
 import 'package:portfolio/features/home/presentation/home_page.dart';
-import 'package:portfolio/features/projectDetails/presentation/projectDetailsPage.dart';
 
 class AppRoutes {
   static const home = '/';
@@ -13,7 +12,6 @@ class AppRoutes {
   static const blogs = '/Blogs';
   static const aboutme = '/AboutMe';
   static const contactme = '/ContactMe';
-  static const projectDetails = '/projects/:name'; // dynamic route pattern
 }
 
 class AppRoute {
@@ -40,13 +38,7 @@ class AppRoute {
         pageBuilder:
             (context, state) => NoTransitionPage(child: ContactmePage()),
       ),
-      GoRoute(
-        path: AppRoutes.projectDetails, // '/projects/:name'
-        pageBuilder: (context, state) {
-          final name = state.pathParameters['name']!;
-          return NoTransitionPage(child: ProjectDetailsPage(projectName: name));
-        },
-      ),
+
       // GoRoute
     ],
   ); // GoRouter
