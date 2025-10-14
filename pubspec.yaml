@@ -44,6 +44,7 @@ flutter:
   assets:
     - "assets/images/"
     - "assets/icons/"
+    - "assets/icons/tech_stack/"
     - "assets/fonts/"
   
   fonts:
