@@ -72,7 +72,7 @@ class _HomeCoursesListDesktop extends StatelessWidget {
           physics:
               const NeverScrollableScrollPhysics(), // disables internal scrolling
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 7,
+            crossAxisCount: 6,
             crossAxisSpacing: 20,
             mainAxisSpacing: 20,
           ),

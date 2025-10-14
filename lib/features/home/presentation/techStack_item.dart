@@ -15,8 +15,8 @@ class TechstackItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StyledCard(
-      height: 200,
-      width: 200,
+      height: 150,
+      width: 150,
       child: Column(
         children: [
           Container(width: 100, height: 50, child: SvgPicture.asset(image)),

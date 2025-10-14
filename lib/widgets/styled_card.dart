@@ -39,7 +39,9 @@ class _StyledCardState extends State<StyledCard> {
                 isHovered ||
                 context.isPhoneOrTablet) ...[
               _BorderShadow(),
-              Positioned(bottom: 0, right: 0, child: _BorderShadow()),
+              widget.borderEffect
+                  ? Positioned(bottom: 0, right: 0, child: _BorderShadow())
+                  : Container(),
             ],
             Container(
               width: widget.width,
