@@ -1,4 +1,21 @@
 {
     "buildCommand": "bash ./setup_flutter.sh && ./flutter/bin/flutter build web --release",
-    "outputDirectory": "build/web"
+    "outputDirectory": "build/web",
+    "headers": [
+        {
+            "source": "/assets/(.*).svg",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "image/svg+xml"
+                }
+            ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
 }
