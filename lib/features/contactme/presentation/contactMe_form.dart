@@ -44,13 +44,13 @@ class _ContactmeFormState extends State<ContactmeForm> {
             Row(
               children: [
                 SEOText(
-                  "Let's",
+                  context.texts.contactLets,
                   style: context.textStyle.titleLgBold.copyWith(
                     color: context.colorScheme.onBackground,
                   ),
                 ),
                 SEOText(
-                  " Talk",
+                  context.texts.contactTalk,
                   style: context.textStyle.titleLgBold,
                   gradient: LinearGradient(
                     colors: [
@@ -63,7 +63,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
             ),
             Gap(Insets.xxl),
             SEOText(
-              "Got something to say? Drop an anonymous message and let’s keep it between us 👀",
+              context.texts.contactSubtitle,
               style: context.textStyle.bodyLgMedium.copyWith(
                 color: context.colorScheme.onBackground,
               ),
@@ -71,7 +71,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
             Gap(Insets.xl),
 
             SEOText(
-              "Your Name",
+              context.texts.contactYourName,
               style: context.textStyle.bodyMdMedium.copyWith(
                 color: context.colorScheme.onBackground,
               ),
@@ -81,11 +81,10 @@ class _ContactmeFormState extends State<ContactmeForm> {
             TextFormField(
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Please enter your name';
+                  return context.texts.contactNameValidation;
                 }
                 return null;
               },
-
               controller: nameController,
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -104,7 +103,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
             Gap(Insets.xl),
 
             SEOText(
-              "Your Message",
+              context.texts.contactYourMessage,
               style: context.textStyle.bodyMdMedium.copyWith(
                 color: context.colorScheme.onBackground,
               ),
@@ -114,7 +113,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
             TextFormField(
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Please enter your message';
+                  return context.texts.contactMessageValidation;
                 }
                 return null;
               },
@@ -130,7 +129,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
                             : context.colorScheme.primary,
                   ),
                 ),
-                hintText: "Write your message here...",
+                hintText: context.texts.contactMessageHint,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -138,7 +137,7 @@ class _ContactmeFormState extends State<ContactmeForm> {
             ),
             Gap(Insets.xl),
             PrimaryButton(
-              title: "Send Message",
+              title: context.texts.contactSendButton,
               onPressed: () async {
                 if (formkey.currentState!.validate()) {
                   bool response = await Sendemailservice.sendEmail(
@@ -150,13 +149,12 @@ class _ContactmeFormState extends State<ContactmeForm> {
                     formkey.currentState!.reset();
                     nameController.clear();
                     messageController.clear();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(context.texts.contactSuccess)),
+                    );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Failed to send email. Please try again.',
-                        ),
-                      ),
+                      SnackBar(content: Text(context.texts.contactError)),
                     );
                   }
                 }

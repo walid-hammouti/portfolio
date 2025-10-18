@@ -23,10 +23,7 @@ class MyFooter extends StatelessWidget {
           const Divider(height: 24),
           const PoweredByFlutter(),
           const Gap(8),
-          Text(
-            '© 2025 HAMMOUTI Walid. All rights reserved.',
-            style: context.textStyle.bodyMdMedium,
-          ),
+          Text(context.texts.copyright, style: context.textStyle.bodyMdMedium),
           const Gap(8),
         ],
       ),

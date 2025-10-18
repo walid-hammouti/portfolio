@@ -47,6 +47,10 @@ extension StyledContent on BuildContext {
     }
   }
 
+  bool get isArabic => Localizations.localeOf(this).languageCode == 'ar';
+  bool get isFrench => Localizations.localeOf(this).languageCode == 'fr';
+  bool get isEnglish => Localizations.localeOf(this).languageCode == 'en';
+  bool get isRTL => Localizations.localeOf(this).languageCode == 'ar';
   AppLocalizations get texts =>
       AppLocalizations.of(this) ?? lookupAppLocalizations(const Locale('en'));
 

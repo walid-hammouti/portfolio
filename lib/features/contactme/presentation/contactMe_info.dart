@@ -24,13 +24,13 @@ class ContactmeInfo extends StatelessWidget {
           Row(
             children: [
               SEOText(
-                "Reach",
+                context.texts.reach,
                 style: context.textStyle.titleLgBold.copyWith(
                   color: context.colorScheme.onBackground,
                 ),
               ),
               SEOText(
-                " Me",
+                context.texts.me,
                 style: context.textStyle.titleLgBold,
                 gradient: LinearGradient(
                   colors: [
@@ -44,7 +44,7 @@ class ContactmeInfo extends StatelessWidget {
 
           Gap(Insets.xxl),
           SEOText(
-            "Feel free to reach out! You can contact me via email, phone, or through my social media channels. I’d love to hear from you.",
+            context.texts.contactDescription,
             style: context.textStyle.bodyLgMedium.copyWith(
               color: context.colorScheme.onBackground,
             ),
@@ -53,7 +53,7 @@ class ContactmeInfo extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.email, color: context.colorScheme.onBackground),
             title: SEOText(
-              "w.walidcontacts@gmail.com",
+              context.texts.email,
               style: context.textStyle.bodyMdMedium.copyWith(
                 color: context.colorScheme.onBackground,
               ),
@@ -62,7 +62,7 @@ class ContactmeInfo extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.phone, color: context.colorScheme.onBackground),
             title: SEOText(
-              "+213 5 62 26 57 67",
+              context.texts.phone,
               style: context.textStyle.bodyMdMedium.copyWith(
                 color: context.colorScheme.onBackground,
               ),

@@ -29,6 +29,8 @@ class ProjectItem extends StatelessWidget {
       hoverColor: Colors.transparent,
       onTap: () => context.push('${AppRoutes.projects}/flutter-ai'),
       child: StyledCard(
+        height: 400,
+        width: 400,
         child: AspectRatio(
           aspectRatio: 0.7,
           child: Column(

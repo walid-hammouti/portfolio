@@ -10,7 +10,7 @@ class LargeHeroButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment: context.isRTL ? Alignment.centerRight : Alignment.centerLeft,
       child: PrimaryButton(
         title: context.texts.reachMe,
         onPressed: () => context.push(AppRoutes.contactme),

@@ -43,6 +43,7 @@ class _LargeHero extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [HeroTexts(), Gap(Insets.xxl), LargeHeroButtons()],
           ),
         ),

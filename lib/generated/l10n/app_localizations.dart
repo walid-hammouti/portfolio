@@ -219,6 +219,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hammouti '**
   String get hammouti;
+
+  /// No description provided for @mobileDevelopment.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Development'**
+  String get mobileDevelopment;
+
+  /// No description provided for @mobileDevText1.
+  ///
+  /// In en, this message translates to:
+  /// **'Built cross-platform mobile apps using Flutter and Dart'**
+  String get mobileDevText1;
+
+  /// No description provided for @mobileDevText2.
+  ///
+  /// In en, this message translates to:
+  /// **'Integrated Supabase for authentication and real-time database'**
+  String get mobileDevText2;
+
+  /// No description provided for @mobileDevText3.
+  ///
+  /// In en, this message translates to:
+  /// **'Designed responsive light and dark themes for better UX'**
+  String get mobileDevText3;
+
+  /// No description provided for @mobileDevText4.
+  ///
+  /// In en, this message translates to:
+  /// **'Used Cubit, BLoC, Provider, and Riverpod for scalable state management'**
+  String get mobileDevText4;
+
+  /// No description provided for @aiMachineLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'AI & Machine Learning'**
+  String get aiMachineLearning;
+
+  /// No description provided for @aiText1.
+  ///
+  /// In en, this message translates to:
+  /// **'Currently learning and exploring machine learning techniques'**
+  String get aiText1;
+
+  /// No description provided for @aiText2.
+  ///
+  /// In en, this message translates to:
+  /// **'Performing data analysis and preprocessing using pandas and NumPy'**
+  String get aiText2;
+
+  /// No description provided for @aiText3.
+  ///
+  /// In en, this message translates to:
+  /// **'Visualizing datasets and model performance with Matplotlib'**
+  String get aiText3;
+
+  /// No description provided for @desktopDevelopment.
+  ///
+  /// In en, this message translates to:
+  /// **'Desktop Development'**
+  String get desktopDevelopment;
+
+  /// No description provided for @desktopText1.
+  ///
+  /// In en, this message translates to:
+  /// **'Built a Student Management System using C and GTK3'**
+  String get desktopText1;
+
+  /// No description provided for @desktopText2.
+  ///
+  /// In en, this message translates to:
+  /// **'Developed a Linear Algebra Calculator with Python and Tkinter'**
+  String get desktopText2;
+
+  /// No description provided for @copyright.
+  ///
+  /// In en, this message translates to:
+  /// **'© 2025 HAMMOUTI Walid. All rights reserved.'**
+  String get copyright;
+
+  /// No description provided for @reach.
+  ///
+  /// In en, this message translates to:
+  /// **'Reach '**
+  String get reach;
+
+  /// No description provided for @me.
+  ///
+  /// In en, this message translates to:
+  /// **'Me'**
+  String get me;
+
+  /// No description provided for @contactDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Feel free to reach out! You can contact me via email, phone, or through my social media channels. I\'d love to hear from you.'**
+  String get contactDescription;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'w.walidcontacts@gmail.com'**
+  String get email;
+
+  /// No description provided for @phone.
+  ///
+  /// In en, this message translates to:
+  /// **'+213 5 6 26 57 67'**
+  String get phone;
+
+  /// No description provided for @contactLets.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s'**
+  String get contactLets;
+
+  /// No description provided for @contactTalk.
+  ///
+  /// In en, this message translates to:
+  /// **'Talk'**
+  String get contactTalk;
+
+  /// No description provided for @contactSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Got something to say? Drop an anonymous message and let\'s keep it between us 👀'**
+  String get contactSubtitle;
+
+  /// No description provided for @contactYourName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Name'**
+  String get contactYourName;
+
+  /// No description provided for @contactNameValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get contactNameValidation;
+
+  /// No description provided for @contactYourMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Message'**
+  String get contactYourMessage;
+
+  /// No description provided for @contactMessageValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your message'**
+  String get contactMessageValidation;
+
+  /// No description provided for @contactMessageHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Write your message here...'**
+  String get contactMessageHint;
+
+  /// No description provided for @contactSendButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Message'**
+  String get contactSendButton;
+
+  /// No description provided for @contactSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Message sent successfully!'**
+  String get contactSuccess;
+
+  /// No description provided for @contactError.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to send email. Please try again.'**
+  String get contactError;
 }
 
 class _AppLocalizationsDelegate

@@ -27,11 +27,11 @@ class AppLocalizationsAr extends AppLocalizations {
   String get walid => ' وليد ';
 
   @override
-  String get mobileAppDeveloper => 'مطور تطبيقات موبايل';
+  String get mobileAppDeveloper => 'مطور تطبيقات هاتف';
 
   @override
   String get mobileAppDeveloperDesc =>
-      'أنا مطور تطبيقات موبايل لدي خبرة لمدة عام في تطوير تطبيقات Flutter و Dart عالية الجودة. أستمتع بإنشاء تطبيقات مبتكرة وسهلة الاستخدام تحل مشاكل حقيقية للمستخدمين.';
+      'أنا مطور تطبيقات جوال لدي خبرة لمدة عام في تطوير تطبيقات فلاتر ودارت عالية الجودة. أستمتع بإنشاء تطبيقات مبتكرة وسهلة الاستخدام تحل مشاكل حقيقية للمستخدمين';
 
   @override
   String get hammoutiWalid => 'حموتي وليد';
@@ -48,7 +48,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get experincedesc =>
-      'نظرة على خبرتي عبر مجالات تطوير مختلفة - من الموبايل إلى الذكاء الاصطناعي.';
+      'نظرة على خبرتي عبر مجالات تطوير مختلفة - من الهاتف إلى الذكاء الاصطناعي.';
 
   @override
   String get poweredByFlutter => 'مدعوم من Flutter';
@@ -71,4 +71,101 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get hammouti => 'حموتي';
+
+  @override
+  String get mobileDevelopment => 'تطوير تطبيقات الهاتف';
+
+  @override
+  String get mobileDevText1 =>
+      'بناء تطبيقات هاتف متعددة المنصات باستخدام Flutter و Dart';
+
+  @override
+  String get mobileDevText2 =>
+      'دمج Supabase للمصادقة وقاعدة البيانات في الوقت الفعلي';
+
+  @override
+  String get mobileDevText3 =>
+      'تصميم سمات فاتحة وداكنة متجاوبة لتحسين تجربة المستخدم';
+
+  @override
+  String get mobileDevText4 =>
+      'استخدمت Cubit و BLoC و Provider و Riverpod لإدارة الحالة القابلة للتطوير';
+
+  @override
+  String get aiMachineLearning => 'الذكاء الاصطناعي وتعلم الآلة';
+
+  @override
+  String get aiText1 => 'أتعلم حاليًا وأستكشف تقنيات تعلم الآلة';
+
+  @override
+  String get aiText2 =>
+      'إجراء تحليل البيانات والمعالجة المسبقة باستخدام pandas و NumPy';
+
+  @override
+  String get aiText3 =>
+      'تصور مجموعات البيانات وأداء النماذج باستخدام Matplotlib';
+
+  @override
+  String get desktopDevelopment => 'تطوير تطبيقات سطح المكتب';
+
+  @override
+  String get desktopText1 => 'بناء نظام إدارة الطلاب باستخدام C و GTK3';
+
+  @override
+  String get desktopText2 =>
+      'تطوير آلة حاسبة للجبر الخطي باستخدام Python و Tkinter';
+
+  @override
+  String get copyright => '© 2025 حموتي وليد. جميع الحقوق محفوظة.';
+
+  @override
+  String get reach => 'تواصل';
+
+  @override
+  String get me => ' معي ';
+
+  @override
+  String get contactDescription =>
+      'لا تتردد في التواصل! يمكنك الاتصال بي عبر البريد الإلكتروني أو الهاتف أو من خلال قنوات التواصل الاجتماعي الخاصة بي. يسعدني أن أسمع منك.';
+
+  @override
+  String get email => 'w.walidcontacts@gmail.com';
+
+  @override
+  String get phone => '67 57 26 62 5 213+';
+
+  @override
+  String get contactLets => 'دعونا';
+
+  @override
+  String get contactTalk => 'نتحدث';
+
+  @override
+  String get contactSubtitle =>
+      'هل لديك شيء لتقوله؟ اترك رسالة مجهولة ولنحتفظ بالأمر بيننا 👀';
+
+  @override
+  String get contactYourName => 'اسمك';
+
+  @override
+  String get contactNameValidation => 'الرجاء إدخال اسمك';
+
+  @override
+  String get contactYourMessage => 'رسالتك';
+
+  @override
+  String get contactMessageValidation => 'الرجاء إدخال رسالتك';
+
+  @override
+  String get contactMessageHint => 'اكتب رسالتك هنا...';
+
+  @override
+  String get contactSendButton => 'إرسال الرسالة';
+
+  @override
+  String get contactSuccess => 'تم إرسال الرسالة بنجاح!';
+
+  @override
+  String get contactError =>
+      'فشل في إرسال البريد الإلكتروني. الرجاء المحاولة مرة أخرى.';
 }

@@ -35,7 +35,7 @@ class DesktopExperiencesBody extends StatelessWidget {
           Center(
             child: Container(
               width: 3,
-              height: 220 * explen,
+              height: 260 * explen,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -50,36 +50,33 @@ class DesktopExperiencesBody extends StatelessWidget {
             ),
           ),
           PositionedExpirenceItem(
-            isRight: true,
+            isLeft: true,
             top: 1,
-            title: 'Mobile Development',
+            title: context.texts.mobileDevelopment,
             texts: [
-              'Built cross-platform mobile apps using Flutter and Dart',
-              'Integrated Supabase for authentication and real-time database',
-              'Designed responsive light and dark themes for better UX',
-              'Used Cubit, BLoC, Provider, and Riverpod for scalable state management',
+              context.texts.mobileDevText1,
+              context.texts.mobileDevText2,
+              context.texts.mobileDevText3,
+              context.texts.mobileDevText4,
             ],
           ),
 
           PositionedExpirenceItem(
-            isRight: false,
+            isLeft: false,
             top: 2,
-            title: 'AI & Machine Learning',
+            title: context.texts.aiMachineLearning,
             texts: [
-              'Currently learning and exploring machine learning techniques',
-              'Performing data analysis and preprocessing using pandas and NumPy',
-              'Visualizing datasets and model performance with Matplotlib',
+              context.texts.aiText1,
+              context.texts.aiText2,
+              context.texts.aiText3,
             ],
           ),
 
           PositionedExpirenceItem(
-            isRight: true,
+            isLeft: true,
             top: 3,
-            title: 'Desktop Development',
-            texts: [
-              'Built a Student Management System using C and GTK3',
-              'Developed a Linear Algebra Calculator with Python and Tkinter',
-            ],
+            title: context.texts.desktopDevelopment,
+            texts: [context.texts.desktopText1, context.texts.desktopText2],
           ),
         ],
       ),
@@ -96,12 +93,12 @@ class PhoneExperiencesBody extends StatelessWidget {
       child: Column(
         children: [
           ExperiencesItem(
-            title: 'Mobile Development',
+            title: context.texts.mobileDevelopment,
             texts: [
-              'Built cross-platform mobile apps using Flutter and Dart',
-              'Integrated Supabase for authentication and real-time database',
-              'Designed responsive light and dark themes for better UX',
-              'Used Cubit, BLoC, Provider, and Riverpod for scalable state management',
+              context.texts.mobileDevText1,
+              context.texts.mobileDevText2,
+              context.texts.mobileDevText3,
+              context.texts.mobileDevText4,
             ],
           ),
           SizedBox(
@@ -112,11 +109,11 @@ class PhoneExperiencesBody extends StatelessWidget {
             ), // DottedLine
           ),
           ExperiencesItem(
-            title: 'AI & Machine Learning',
+            title: context.texts.aiMachineLearning,
             texts: [
-              'Currently learning and exploring machine learning techniques',
-              'Performing data analysis and preprocessing using pandas and NumPy',
-              'Visualizing datasets and model performance with Matplotlib',
+              context.texts.aiText1,
+              context.texts.aiText2,
+              context.texts.aiText3,
             ],
           ),
           SizedBox(
@@ -127,11 +124,8 @@ class PhoneExperiencesBody extends StatelessWidget {
             ), // DottedLine
           ),
           ExperiencesItem(
-            title: 'Desktop Development',
-            texts: [
-              'Built a Student Management System using C and GTK3',
-              'Developed a Linear Algebra Calculator with Python and Tkinter',
-            ],
+            title: context.texts.desktopDevelopment,
+            texts: [context.texts.desktopText1, context.texts.desktopText2],
           ),
 
           // SizedBox
@@ -142,31 +136,34 @@ class PhoneExperiencesBody extends StatelessWidget {
 }
 
 const expwidth = 300.0;
-const expheight = 320.0;
+const expheight = 360.0;
 
 class PositionedExpirenceItem extends StatelessWidget {
-  const PositionedExpirenceItem({
+  PositionedExpirenceItem({
     required this.top,
     super.key,
     required this.title,
     required this.texts,
-    required this.isRight,
+    required this.isLeft,
   });
   final String title;
   final List<String> texts;
   final double top;
-  final bool isRight;
+  bool isLeft;
+
+  // Usage
   @override
   Widget build(BuildContext context) {
+    bool isRTL = context.isRTL;
     return Positioned(
-      top: top * 240,
-      right: isRight ? 400 : 0,
-      left: isRight ? 0 : 400,
+      top: top * 300,
+      right: isRTL ? (isLeft ? 0 : 400) : (isLeft ? 400 : 0),
+      left: isRTL ? (isLeft ? 400 : 0) : (isLeft ? 0 : 400),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children:
-            isRight
+            isLeft
                 ? [
                   ExperiencesItem(title: title, texts: texts),
                   SizedBox(
