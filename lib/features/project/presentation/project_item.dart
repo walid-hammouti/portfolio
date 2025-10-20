@@ -6,8 +6,8 @@ import 'package:portfolio/widgets/styled_button.dart';
 import 'package:portfolio/widgets/styled_card.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
 
-class ProjectItem extends StatelessWidget {
-  ProjectItem({
+class ProjectItemDesktop extends StatelessWidget {
+  ProjectItemDesktop({
     super.key,
     required this.image,
     required this.title,
@@ -72,54 +72,119 @@ class ProjectItem extends StatelessWidget {
                       Gap(16),
                     ],
                   ),
-                  if (context.isDesktop)
-                    Row(
-                      children: [
-                        if (!isWebProject)
-                          Expanded(
-                            child: PrimaryButton(
-                              title: "Try App",
-                              onPressed: () {
-                                debugPrint("tap");
-                              },
-                            ),
-                          ),
-                        Gap(16),
+                  Row(
+                    children: [
+                      if (!isWebProject)
                         Expanded(
                           child: PrimaryButton(
-                            title: "Project link",
-                            projectlink: projectlink,
-                          ),
-                        ),
-                      ],
-                    )
-                  else
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        if (!isWebProject)
-                          PrimaryButton(
-                            width: 200,
-
                             title: "Try App",
                             onPressed: () {
                               debugPrint("tap");
                             },
                           ),
-                        Gap(16),
-                        PrimaryButton(
-                          width: 200,
-
+                        ),
+                      Gap(16),
+                      Expanded(
+                        child: PrimaryButton(
                           title: "Project link",
                           projectlink: projectlink,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ProjectItemMobile extends StatelessWidget {
+  ProjectItemMobile({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.projectlink,
+    this.apklink,
+    this.isWebProject = false,
+  });
+
+  final String image;
+  final String title;
+  final String description;
+  final String projectlink;
+  final String? apklink;
+  final bool isWebProject;
+
+  @override
+  Widget build(BuildContext context) {
+    return StyledCard(
+      height: 600,
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Spacer(),
+
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                image,
+                fit: BoxFit.contain,
+                width: double.infinity,
+                height: 200,
+              ),
+            ),
+            Spacer(),
+            SEOText(
+              title,
+              style: context.textStyle.bodyLgBold.copyWith(
+                color: context.colorScheme.onBackground,
+                height: 1.2,
+              ),
+              textRendererStyle: TextRendererStyle.header4,
+            ),
+            Gap(16),
+            SEOText(
+              description,
+              style: context.textStyle.bodyMdMedium.copyWith(
+                color: context.colorScheme.onSurface,
+                height: 1.6,
+              ),
+              maxlines: 20,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Gap(24),
+            Column(
+              children: [
+                if (!isWebProject)
+                  SizedBox(
+                    width: double.infinity,
+                    child: PrimaryButton(
+                      title: "Try App",
+                      onPressed: () {
+                        debugPrint("tap");
+                      },
+                    ),
+                  ),
+                if (!isWebProject) Gap(12),
+                SizedBox(
+                  width: double.infinity,
+                  child: PrimaryButton(
+                    title: "Project link",
+                    projectlink: projectlink,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
