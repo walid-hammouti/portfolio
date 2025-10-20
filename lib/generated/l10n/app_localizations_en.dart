@@ -169,4 +169,33 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contactError => 'Failed to send email. Please try again.';
+
+  @override
+  String get whatIBuilt => 'What I’ve Built';
+
+  @override
+  String get projectsSubtitle =>
+      'A glimpse into my journey — building meaningful projects that solve problems and inspire ideas.';
+
+  @override
+  String get projectRiguelniTitle => 'Riguelni - Freelance platform';
+
+  @override
+  String get projectRiguelniDesc =>
+      'RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike. With robust features such as real-time chat and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.';
+
+  @override
+  String get projectFluentNowTitle =>
+      'FluentNow — Your Smart Language School Companion';
+
+  @override
+  String get projectFluentNowDesc =>
+      'FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.';
+
+  @override
+  String get projectPortfolioTitle => 'My Flutter Web Portfolio';
+
+  @override
+  String get projectPortfolioDesc =>
+      'A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.';
 }

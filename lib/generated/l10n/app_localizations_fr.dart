@@ -171,4 +171,33 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get contactError =>
       'Échec de l\'envoi de l\'email. Veuillez réessayer.';
+
+  @override
+  String get whatIBuilt => 'Ce que j’ai construit';
+
+  @override
+  String get projectsSubtitle =>
+      'Un aperçu de mon parcours — créer des projets significatifs qui résolvent des problèmes et inspirent des idées.';
+
+  @override
+  String get projectRiguelniTitle => 'Riguelni - Plateforme de freelance';
+
+  @override
+  String get projectRiguelniDesc =>
+      'RIGELNI est une plateforme moderne de freelance qui connecte des professionnels qualifiés avec des clients à la recherche de services. Elle offre un environnement sécurisé et intuitif où les utilisateurs peuvent acheter et vendre des services, rendant la solution flexible pour les freelances et les entreprises. Avec des fonctionnalités telles que le chat en temps réel et un tableau de bord simple, RIGELNI vise à simplifier les transactions et la gestion de projets freelances.';
+
+  @override
+  String get projectFluentNowTitle =>
+      'FluentNow — Votre compagnon intelligent d’école de langues';
+
+  @override
+  String get projectFluentNowDesc =>
+      'FluentNow est une application mobile moderne conçue pour les écoles de langues privées afin de se connecter avec leurs étudiants. Elle permet d’explorer facilement les cours disponibles, découvrir de nouveaux programmes et rester informé des réductions, événements et actualités. Les étudiants peuvent s’inscrire directement via l’application et accéder à toutes les informations nécessaires — sur une plateforme simple et élégante.';
+
+  @override
+  String get projectPortfolioTitle => 'Mon portfolio Flutter Web';
+
+  @override
+  String get projectPortfolioDesc =>
+      'Un portfolio moderne et dynamique mettant en valeur mes projets, mes compétences et mon parcours créatif en développement logiciel. Des interfaces intuitives Flutter aux solutions web réactives, ce portfolio reflète ma passion pour la création de technologies centrées sur l’utilisateur. Découvrez mes réalisations et voyez comment je transforme des idées en produits numériques percutants.';
 }

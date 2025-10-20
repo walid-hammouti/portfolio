@@ -48,7 +48,15 @@
         "contactMessageHint": "Write your message here...",
         "contactSendButton": "Send Message",
         "contactSuccess": "Message sent successfully!",
-        "contactError": "Failed to send email. Please try again."
+        "contactError": "Failed to send email. Please try again.",
+        "whatIBuilt": "What I’ve Built",
+        "projectsSubtitle": "A glimpse into my journey — building meaningful projects that solve problems and inspire ideas.",
+        "projectRiguelniTitle": "Riguelni - Freelance platform",
+        "projectRiguelniDesc": "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike. With robust features such as real-time chat and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+        "projectFluentNowTitle": "FluentNow — Your Smart Language School Companion",
+        "projectFluentNowDesc": "FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.",
+        "projectPortfolioTitle": "My Flutter Web Portfolio",
+        "projectPortfolioDesc": "A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products."
     
     
 }

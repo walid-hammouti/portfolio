@@ -33,7 +33,7 @@ class ProjectPageDesktop extends StatelessWidget {
           children: [
             Gap(Insets.xxxl),
             SEOText(
-              "What I’ve Built",
+              context.texts.whatIBuilt,
               style: context.textStyle.titleLgBold,
               gradient: LinearGradient(
                 colors: [
@@ -45,7 +45,7 @@ class ProjectPageDesktop extends StatelessWidget {
             Gap(Insets.xl),
 
             SEOText(
-              "A glimpse into my journey — building meaningful projects that solve problems and inspire ideas.",
+              context.texts.projectsSubtitle,
               style: context.textStyle.bodyLgMedium.copyWith(
                 color: context.colorScheme.onSurface,
               ),
@@ -56,9 +56,8 @@ class ProjectPageDesktop extends StatelessWidget {
               apklink: "",
               projectlink: "",
               image: "assets/images/RigeulniScreenshot.jpg",
-              title: "Riguelni - Freelance platfrom",
-              description:
-                  "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+              title: context.texts.projectRiguelniTitle,
+              description: context.texts.projectRiguelniDesc,
             ),
             Gap(Insets.xxl),
 
@@ -66,9 +65,8 @@ class ProjectPageDesktop extends StatelessWidget {
               apklink: "",
               projectlink: "",
               image: "assets/images/fluentnowScreenshot.jpg",
-              title: "FluentNow — Your Smart Language School Companion",
-              description:
-                  "FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.",
+              title: context.texts.projectFluentNowTitle,
+              description: context.texts.projectFluentNowDesc,
             ),
             Gap(Insets.xxl),
 
@@ -76,9 +74,8 @@ class ProjectPageDesktop extends StatelessWidget {
               isWebProject: true,
               projectlink: "",
               image: "assets/images/portfolioScreenshot.png",
-              title: "My Flutter Web Portfolio",
-              description:
-                  "A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.",
+              title: context.texts.projectPortfolioTitle,
+              description: context.texts.projectPortfolioDesc,
             ),
           ],
         ),
@@ -121,9 +118,8 @@ class ProjectPagePhone extends StatelessWidget {
               apklink: "",
               projectlink: "",
               image: "assets/images/RigeulniScreenshot.jpg",
-              title: "Riguelni - Freelance platfrom",
-              description:
-                  "RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike.With robust features such as real-time chat, and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.",
+              title: context.texts.projectRiguelniTitle,
+              description: context.texts.projectRiguelniDesc,
             ),
             Gap(Insets.xxl),
 
@@ -131,9 +127,8 @@ class ProjectPagePhone extends StatelessWidget {
               apklink: "",
               projectlink: "",
               image: "assets/images/fluentnowScreenshot.jpg",
-              title: "FluentNow — Your Smart Language School Companion",
-              description:
-                  "FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.",
+              title: context.texts.projectFluentNowTitle,
+              description: context.texts.projectFluentNowDesc,
             ),
             Gap(Insets.xxl),
 
@@ -141,9 +136,8 @@ class ProjectPagePhone extends StatelessWidget {
               isWebProject: true,
               projectlink: "",
               image: "assets/images/portfolioScreenshot.png",
-              title: "My Flutter Web Portfolio",
-              description:
-                  "A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.",
+              title: context.texts.projectPortfolioTitle,
+              description: context.texts.projectPortfolioDesc,
             ),
           ],
         ),

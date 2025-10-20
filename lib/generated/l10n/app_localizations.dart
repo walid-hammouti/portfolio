@@ -393,6 +393,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to send email. Please try again.'**
   String get contactError;
+
+  /// No description provided for @whatIBuilt.
+  ///
+  /// In en, this message translates to:
+  /// **'What I’ve Built'**
+  String get whatIBuilt;
+
+  /// No description provided for @projectsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A glimpse into my journey — building meaningful projects that solve problems and inspire ideas.'**
+  String get projectsSubtitle;
+
+  /// No description provided for @projectRiguelniTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Riguelni - Freelance platform'**
+  String get projectRiguelniTitle;
+
+  /// No description provided for @projectRiguelniDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'RIGELNI is a modern freelance marketplace that connects skilled professionals with clients looking for services. The platform provides a secure and intuitive environment where users can both buy and sell services, making it a flexible solution for freelancers and businesses alike. With robust features such as real-time chat and an easy-to-use dashboard, RIGELNI aims to streamline freelance transactions and project management.'**
+  String get projectRiguelniDesc;
+
+  /// No description provided for @projectFluentNowTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'FluentNow — Your Smart Language School Companion'**
+  String get projectFluentNowTitle;
+
+  /// No description provided for @projectFluentNowDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.'**
+  String get projectFluentNowDesc;
+
+  /// No description provided for @projectPortfolioTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My Flutter Web Portfolio'**
+  String get projectPortfolioTitle;
+
+  /// No description provided for @projectPortfolioDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.'**
+  String get projectPortfolioDesc;
 }
 
 class _AppLocalizationsDelegate
