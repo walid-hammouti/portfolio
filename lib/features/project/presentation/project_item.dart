@@ -1,77 +1,125 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 import 'package:portfolio/extensions.dart';
-import 'package:portfolio/routes/app_routes.dart';
 import 'package:portfolio/widgets/seo_text.dart';
 import 'package:portfolio/widgets/styled_button.dart';
 import 'package:portfolio/widgets/styled_card.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
 
 class ProjectItem extends StatelessWidget {
-  const ProjectItem({
+  ProjectItem({
     super.key,
     required this.image,
     required this.title,
     required this.description,
     required this.projectlink,
+    this.apklink,
+    this.isWebProject = false,
   });
 
   final String image;
   final String title;
   final String description;
   final String projectlink;
+  final String? apklink;
+  final bool isWebProject;
+
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      highlightColor: Colors.transparent,
-
-      hoverColor: Colors.transparent,
-      onTap: () => context.push('${AppRoutes.projects}/flutter-ai'),
-      child: StyledCard(
-        height: 400,
-        width: 400,
-        child: AspectRatio(
-          aspectRatio: 0.7,
-          child: Column(
-            children: [
-              AspectRatio(
-                aspectRatio: 1.5,
-                child: Image.asset(image, fit: BoxFit.cover),
-              ),
-              Gap(24),
-              SEOText(
-                title,
-                style: context.textStyle.bodyLgBold.copyWith(
-                  color: context.colorScheme.onBackground,
-                ),
-                textRendererStyle: TextRendererStyle.header4,
-              ),
-              Gap(8),
-
-              Expanded(
-                child: SEOText(
-                  description,
-                  style: context.textStyle.bodyMdMedium.copyWith(
-                    color: context.colorScheme.onSurface,
-                  ),
-                  maxlines: 4,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              Row(
+    return StyledCard(
+      height: 500,
+      width: 900,
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              image,
+              fit: BoxFit.contain,
+              height: 500,
+              width: 200,
+            ),
+          ),
+          Gap(32),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  PrimaryButton(title: "Try App"),
-                  PrimaryButton(
-                    title: "Project link",
-                    projectlink: projectlink,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SEOText(
+                        title,
+                        style: context.textStyle.bodyLgBold.copyWith(
+                          color: context.colorScheme.onBackground,
+                          height: 1.2,
+                        ),
+                        textRendererStyle: TextRendererStyle.header4,
+                      ),
+                      Gap(40),
+                      SEOText(
+                        description,
+                        style: context.textStyle.bodyMdMedium.copyWith(
+                          color: context.colorScheme.onSurface,
+                          height: 1.6,
+                        ),
+                        maxlines: 6,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Gap(16),
+                    ],
                   ),
+                  if (context.isDesktop)
+                    Row(
+                      children: [
+                        if (!isWebProject)
+                          Expanded(
+                            child: PrimaryButton(
+                              title: "Try App",
+                              onPressed: () {
+                                debugPrint("tap");
+                              },
+                            ),
+                          ),
+                        Gap(16),
+                        Expanded(
+                          child: PrimaryButton(
+                            title: "Project link",
+                            projectlink: projectlink,
+                          ),
+                        ),
+                      ],
+                    )
+                  else
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (!isWebProject)
+                          PrimaryButton(
+                            width: 200,
+
+                            title: "Try App",
+                            onPressed: () {
+                              debugPrint("tap");
+                            },
+                          ),
+                        Gap(16),
+                        PrimaryButton(
+                          width: 200,
+
+                          title: "Project link",
+                          projectlink: projectlink,
+                        ),
+                      ],
+                    ),
                 ],
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

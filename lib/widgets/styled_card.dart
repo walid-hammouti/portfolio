@@ -39,9 +39,8 @@ class _StyledCardState extends State<StyledCard> {
                 isHovered ||
                 context.isPhoneOrTablet) ...[
               _BorderShadow(),
-              widget.borderEffect
-                  ? Positioned(bottom: 0, right: 0, child: _BorderShadow())
-                  : Container(),
+              if (widget.borderEffect)
+                Positioned(bottom: 0, right: 0, child: _BorderShadow()),
             ],
             Container(
               width: widget.width,
@@ -64,9 +63,13 @@ class _StyledCardState extends State<StyledCard> {
               child: widget.child,
             ),
             if (widget.borderEffect || isHovered || context.isPhoneOrTablet)
-              CustomPaint(
-                size: Size(widget.width ?? 0, widget.height ?? 0),
-                painter: CurvedLinePainter(color: context.colorScheme.primary),
+              IgnorePointer(
+                child: CustomPaint(
+                  size: Size(widget.width ?? 0, widget.height ?? 0),
+                  painter: CurvedLinePainter(
+                    color: context.colorScheme.primary,
+                  ),
+                ),
               ),
           ],
         ),

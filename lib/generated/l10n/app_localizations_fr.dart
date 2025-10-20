@@ -138,7 +138,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get phone => '+213 5 62 26 57 67';
 
   @override
-  String get contactLets => 'Parlons';
+  String get contactLets => 'Parlons ';
 
   @override
   String get contactTalk => 'ensemble';

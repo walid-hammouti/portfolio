@@ -138,7 +138,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get contactLets => 'دعونا';
 
   @override
-  String get contactTalk => 'نتحدث';
+  String get contactTalk => ' نتحدث ';
 
   @override
   String get contactSubtitle =>
