@@ -30,7 +30,7 @@ class AppTheme {
       colorScheme: ColorScheme.light(
         primary: AppColors.primaryColor,
         background: AppColors.gray[100]!,
-        surface: Color(0xFFF1EBFC),
+        surface: Color(0xFFF5F3FF),
         outline: AppColors.gray[300]!,
         outlineVariant: AppColors.gray[400]!,
         onBackground: AppColors.gray[800]!,
