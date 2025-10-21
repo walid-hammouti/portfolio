@@ -86,7 +86,7 @@ class ProjectItemDesktop extends StatelessWidget {
                           ),
                         ),
                       Gap(16),
-                      if (!showlink)
+                      if (showlink)
                         Expanded(
                           child: PrimaryButton(
                             title: "Project link",
