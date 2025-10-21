@@ -145,6 +145,7 @@ class ProjectItemMobile extends StatelessWidget {
     required this.projectlink,
     this.apklink,
     this.isWebProject = false,
+    this.showlink = true,
   });
 
   final String image;
@@ -153,6 +154,7 @@ class ProjectItemMobile extends StatelessWidget {
   final String projectlink;
   final String? apklink;
   final bool isWebProject;
+  final bool showlink;
 
   @override
   Widget build(BuildContext context) {
@@ -207,17 +209,18 @@ class ProjectItemMobile extends StatelessWidget {
                       },
                     ),
                   ),
-                if (!isWebProject) Gap(12),
-                SizedBox(
-                  width: double.infinity,
-                  child: PrimaryButton(
-                    title: "Project link",
-                    projectlink: projectlink,
-                    onPressed: () {
-                      openUrl(projectlink);
-                    },
+                Gap(12),
+                if (showlink)
+                  SizedBox(
+                    width: double.infinity,
+                    child: PrimaryButton(
+                      title: "Project link",
+                      projectlink: projectlink,
+                      onPressed: () {
+                        openUrl(projectlink);
+                      },
+                    ),
                   ),
-                ),
               ],
             ),
           ],
