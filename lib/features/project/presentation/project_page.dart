@@ -119,7 +119,9 @@ class ProjectPagePhone extends StatelessWidget {
             Gap(Insets.xxxl),
 
             ProjectItemMobile(
-              apklink: "",
+              showlink: false,
+              apklink:
+                  "https://github.com/walid-hammouti/Reguelni_App/releases/download/v1.0.0/Riguelni.apk",
               projectlink: "",
               image: "assets/images/RigeulniScreenshot.jpg",
               title: context.texts.projectRiguelniTitle,
@@ -128,8 +130,9 @@ class ProjectPagePhone extends StatelessWidget {
             Gap(Insets.xxl),
 
             ProjectItemMobile(
-              apklink: "",
-              projectlink: "",
+              apklink:
+                  "https://github.com/walid-hammouti/fluentnow/releases/download/v1.0.0/FluentNow.apk",
+              projectlink: "https://github.com/walid-hammouti/fluentnow",
               image: "assets/images/fluentnowScreenshot.jpg",
               title: context.texts.projectFluentNowTitle,
               description: context.texts.projectFluentNowDesc,
@@ -138,7 +141,7 @@ class ProjectPagePhone extends StatelessWidget {
 
             ProjectItemMobile(
               isWebProject: true,
-              projectlink: "",
+              projectlink: "https://github.com/walid-hammouti/portfolio",
               image: "assets/images/portfolioScreenshot.png",
               title: context.texts.projectPortfolioTitle,
               description: context.texts.projectPortfolioDesc,
