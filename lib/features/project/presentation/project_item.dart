@@ -5,6 +5,34 @@ import 'package:portfolio/widgets/seo_text.dart';
 import 'package:portfolio/widgets/styled_button.dart';
 import 'package:portfolio/widgets/styled_card.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:open_filex/open_filex.dart';
+
+Future<void> installApk(String apkPath) async {
+  try {
+    final result = await OpenFilex.open(apkPath);
+    if (result.type == ResultType.done) {
+      print('✅ Installation started successfully');
+    } else {
+      print('⚠️ Failed to open APK: ${result.message}');
+    }
+  } catch (e) {
+    print('❌ Error installing APK: $e');
+  }
+}
+
+Future<void> openUrl(String url) async {
+  final Uri uri = Uri.parse(url);
+
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(
+      uri,
+      mode: LaunchMode.externalApplication, // Opens in browser or external app
+    );
+  } else {
+    throw Exception('Could not launch $url');
+  }
+}
 
 class ProjectItemDesktop extends StatelessWidget {
   ProjectItemDesktop({
@@ -80,8 +108,8 @@ class ProjectItemDesktop extends StatelessWidget {
                         Expanded(
                           child: PrimaryButton(
                             title: "Try App",
-                            onPressed: () {
-                              debugPrint("tap");
+                            onPressed: () async {
+                              await installApk(apklink!);
                             },
                           ),
                         ),
@@ -89,6 +117,9 @@ class ProjectItemDesktop extends StatelessWidget {
                       if (showlink)
                         Expanded(
                           child: PrimaryButton(
+                            onPressed: () {
+                              openUrl(projectlink);
+                            },
                             title: "Project link",
                             projectlink: projectlink,
                           ),
@@ -171,8 +202,8 @@ class ProjectItemMobile extends StatelessWidget {
                     width: double.infinity,
                     child: PrimaryButton(
                       title: "Try App",
-                      onPressed: () {
-                        debugPrint("tap");
+                      onPressed: () async {
+                        await installApk(apklink!);
                       },
                     ),
                   ),
@@ -182,6 +213,9 @@ class ProjectItemMobile extends StatelessWidget {
                   child: PrimaryButton(
                     title: "Project link",
                     projectlink: projectlink,
+                    onPressed: () {
+                      openUrl(projectlink);
+                    },
                   ),
                 ),
               ],
