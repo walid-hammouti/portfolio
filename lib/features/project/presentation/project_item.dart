@@ -15,6 +15,7 @@ class ProjectItemDesktop extends StatelessWidget {
     required this.projectlink,
     this.apklink,
     this.isWebProject = false,
+    this.showlink = true,
   });
 
   final String image;
@@ -23,6 +24,7 @@ class ProjectItemDesktop extends StatelessWidget {
   final String projectlink;
   final String? apklink;
   final bool isWebProject;
+  final bool showlink;
 
   @override
   Widget build(BuildContext context) {
@@ -84,12 +86,13 @@ class ProjectItemDesktop extends StatelessWidget {
                           ),
                         ),
                       Gap(16),
-                      Expanded(
-                        child: PrimaryButton(
-                          title: "Project link",
-                          projectlink: projectlink,
+                      if (!showlink)
+                        Expanded(
+                          child: PrimaryButton(
+                            title: "Project link",
+                            projectlink: projectlink,
+                          ),
                         ),
-                      ),
                     ],
                   ),
                 ],

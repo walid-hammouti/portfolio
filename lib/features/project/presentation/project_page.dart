@@ -6,6 +6,7 @@ import 'package:portfolio/style/app_size.dart';
 
 import 'package:portfolio/widgets/app_scaffold.dart';
 import 'package:portfolio/widgets/seo_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectPage extends StatelessWidget {
   const ProjectPage({super.key});
@@ -53,7 +54,9 @@ class ProjectPageDesktop extends StatelessWidget {
             Gap(Insets.xxxl),
 
             ProjectItemDesktop(
-              apklink: "",
+              showlink: false,
+              apklink:
+                  "https://github.com/walid-hammouti/Reguelni_App/releases/download/v1.0.0/Riguelni.apk",
               projectlink: "",
               image: "assets/images/RigeulniScreenshot.jpg",
               title: context.texts.projectRiguelniTitle,
@@ -62,8 +65,9 @@ class ProjectPageDesktop extends StatelessWidget {
             Gap(Insets.xxl),
 
             ProjectItemDesktop(
-              apklink: "",
-              projectlink: "",
+              apklink:
+                  "https://github.com/walid-hammouti/fluentnow/releases/download/v1.0.0/FluentNow.apk",
+              projectlink: "https://github.com/walid-hammouti/fluentnow",
               image: "assets/images/fluentnowScreenshot.jpg",
               title: context.texts.projectFluentNowTitle,
               description: context.texts.projectFluentNowDesc,
@@ -72,7 +76,7 @@ class ProjectPageDesktop extends StatelessWidget {
 
             ProjectItemDesktop(
               isWebProject: true,
-              projectlink: "",
+              projectlink: "https://github.com/walid-hammouti/portfolio",
               image: "assets/images/portfolioScreenshot.png",
               title: context.texts.projectPortfolioTitle,
               description: context.texts.projectPortfolioDesc,
