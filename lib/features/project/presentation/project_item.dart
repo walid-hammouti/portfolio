@@ -8,16 +8,10 @@ import 'package:seo_renderer/renderers/text_renderer/text_renderer_style.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:open_filex/open_filex.dart';
 
-Future<void> installApk(String apkPath) async {
-  try {
-    final result = await OpenFilex.open(apkPath);
-    if (result.type == ResultType.done) {
-      print('✅ Installation started successfully');
-    } else {
-      print('⚠️ Failed to open APK: ${result.message}');
-    }
-  } catch (e) {
-    print('❌ Error installing APK: $e');
+Future<void> openApkUrl(String url) async {
+  final uri = Uri.parse(url);
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    throw Exception('Could not launch $url');
   }
 }
 
@@ -109,7 +103,7 @@ class ProjectItemDesktop extends StatelessWidget {
                           child: PrimaryButton(
                             title: "Try App",
                             onPressed: () async {
-                              await installApk(apklink!);
+                              await openApkUrl(apklink!);
                             },
                           ),
                         ),
@@ -205,7 +199,7 @@ class ProjectItemMobile extends StatelessWidget {
                     child: PrimaryButton(
                       title: "Try App",
                       onPressed: () async {
-                        await installApk(apklink!);
+                        await openApkUrl(apklink!);
                       },
                     ),
                   ),
