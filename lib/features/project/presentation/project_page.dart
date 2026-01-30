@@ -66,7 +66,7 @@ class ProjectPageDesktop extends StatelessWidget {
 
             ProjectItemDesktop(
               apklink:
-                  "https://github.com/walid-hammouti/fluentnow/releases/download/v1.0.0/FluentNow.apk",
+                  "https://github.com/walid-hammouti/fluentnow/releases/download/v1.0.1/FluentNow.apk",
               projectlink: "https://github.com/walid-hammouti/fluentnow",
               image: "assets/images/fluentnowScreenshot.jpg",
               title: context.texts.projectFluentNowTitle,
