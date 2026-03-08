@@ -16,7 +16,7 @@ class PoweredByFlutter extends StatelessWidget {
           isDark
               ? 'assets/images/flutter_icon_Dark.png'
               : 'assets/images/flutter_icon_Light.png',
-          key: ValueKey(isDark), // 👈 forces reload on theme change
+          key: ValueKey(isDark), 
           width: 36,
           height: 36,
         ),
