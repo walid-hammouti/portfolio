@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:portfolio/extensions.dart';
 import 'package:portfolio/style/app_size.dart';
 import 'package:portfolio/widgets/appbar/my_app_bar.dart';
@@ -79,7 +80,16 @@ class AppScaffold extends StatelessWidget {
               child: CustomScrollView(
                 slivers: [
                   ...slivers,
-                  SliverToBoxAdapter(child: MyFooter()), // SliverToBoxAdapter
+
+                  // Fills the remaining space in the scroll view and keeps the footer
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [MyFooter()],
+                    ),
+                  ),
+                  SliverGap(30),
                 ],
               ), // CustomScrollView
             ), // Container
