@@ -198,4 +198,12 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get projectPortfolioDesc =>
       'A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.';
+
+  @override
+  String get projectEvotingTitle =>
+      'Cryptographic Backend for Secure Electronic Voting';
+
+  @override
+  String get projectEvotingDesc =>
+      'Built the cryptographic backend for a secure electronic voting system as part of a 3rd-year engineering project at ENSTA Algiers. Implemented RSA public-key encryption, blind signatures for ballot anonymity, and a hash-based voter authentication system. Collaborated with a frontend developer to integrate the backend cryptographic API with the client-side web application.';
 }

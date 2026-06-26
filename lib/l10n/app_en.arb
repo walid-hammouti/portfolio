@@ -56,7 +56,8 @@
         "projectFluentNowTitle": "FluentNow — Your Smart Language School Companion",
         "projectFluentNowDesc": "FluentNow is a modern mobile app designed for private language schools to connect with their students. It allows users to easily explore available language courses, discover new programs, and stay informed about discounts, upcoming events, and school news. Students can register for courses directly through the app and access detailed information about each program — all in one simple, elegant platform.",
         "projectPortfolioTitle": "My Flutter Web Portfolio",
-        "projectPortfolioDesc": "A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products."
-    
+        "projectPortfolioDesc": "A modern and dynamic portfolio showcasing my projects, skills, and creative journey in software development. From intuitive Flutter interfaces to responsive web solutions, this portfolio reflects my passion for building smart, user-centered technologies. Explore my featured works, learn about my experience, and see how I turn ideas into impactful digital products.",
+        "projectEvotingTitle": "Cryptographic Backend for Secure Electronic Voting",
+        "projectEvotingDesc": "Built the cryptographic backend for a secure electronic voting system as part of a 3rd-year engineering project at ENSTA Algiers. Implemented RSA public-key encryption, blind signatures for ballot anonymity, and a hash-based voter authentication system. Collaborated with a frontend developer to integrate the backend cryptographic API with the client-side web application."
     
 }
