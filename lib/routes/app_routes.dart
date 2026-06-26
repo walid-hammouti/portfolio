@@ -12,6 +12,7 @@ class AppRoutes {
   static const blogs = '/Blogs';
   static const aboutme = '/AboutMe';
   static const contactme = '/ContactMe';
+  static const blogDetail = '/blog/:file'; // add this
 }
 
 class AppRoute {
@@ -38,7 +39,16 @@ class AppRoute {
         pageBuilder:
             (context, state) => NoTransitionPage(child: ContactmePage()),
       ),
-
+      GoRoute(
+        path: '/blog/:file',
+        pageBuilder:
+            (context, state) => NoTransitionPage(
+              child: BlogDetailPage(
+                title: state.uri.queryParameters['title'] ?? '',
+                file: '${state.pathParameters['file']!}.md',
+              ),
+            ),
+      ),
       // GoRoute
     ],
   ); // GoRouter
