@@ -1,5 +1,5 @@
 {
-    "buildCommand": "bash ./setup_flutter.sh && ./flutter/bin/flutter build web --release",
+    "buildCommand": "bash ./setup_flutter.sh && ./flutter/bin/flutter build web --release --wasm",
     "outputDirectory": "build/web",
     "headers": [
         {
@@ -8,6 +8,19 @@
                 {
                     "key": "Content-Type",
                     "value": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cross-Origin-Opener-Policy",
+                    "value": "same-origin"
+                },
+                {
+                    "key": "Cross-Origin-Embedder-Policy",
+                    "value": "require-corp"
                 }
             ]
         }
