@@ -1,5 +1,5 @@
 {
-    "buildCommand": "bash ./setup_flutter.sh && ./flutter/bin/flutter build web --release --wasm",
+    "buildCommand": "bash ./setup_flutter.sh && ./flutter/bin/flutter build web --release --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/",
     "outputDirectory": "build/web",
     "headers": [
         {
@@ -8,19 +8,6 @@
                 {
                     "key": "Content-Type",
                     "value": "image/svg+xml"
-                }
-            ]
-        },
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Cross-Origin-Opener-Policy",
-                    "value": "same-origin"
-                },
-                {
-                    "key": "Cross-Origin-Embedder-Policy",
-                    "value": "require-corp"
                 }
             ]
         }
