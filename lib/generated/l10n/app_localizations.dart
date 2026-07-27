@@ -325,7 +325,7 @@ abstract class AppLocalizations {
   /// No description provided for @phone.
   ///
   /// In en, this message translates to:
-  /// **'+213 5 6 26 57 67'**
+  /// **'+213 5 62 26 57 67'**
   String get phone;
 
   /// No description provided for @contactLets.
@@ -453,6 +453,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Built the cryptographic backend for a secure electronic voting system as part of a 3rd-year engineering project at ENSTA Algiers. Implemented RSA public-key encryption, blind signatures for ballot anonymity, and a hash-based voter authentication system. Collaborated with a frontend developer to integrate the backend cryptographic API with the client-side web application.'**
   String get projectEvotingDesc;
+
+  /// No description provided for @viewResume.
+  ///
+  /// In en, this message translates to:
+  /// **'View Resume'**
+  String get viewResume;
 }
 
 class _AppLocalizationsDelegate

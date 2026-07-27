@@ -208,4 +208,7 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get projectEvotingDesc =>
       'Développement du backend cryptographique d\'un système de vote électronique sécurisé dans le cadre d\'un projet d\'ingénierie de 3ème année à l\'ENSTA Alger. Implémentation du chiffrement RSA à clé publique, des signatures aveugles pour garantir l\'anonymat des bulletins, et d\'un système d\'authentification des électeurs par hachage. Collaboration avec un développeur frontend pour intégrer l\'API cryptographique au sein de l\'application web cliente.';
+
+  @override
+  String get viewResume => 'Voir le CV';
 }

@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:portfolio/constant/app_icons.dart';
 import 'package:portfolio/extensions.dart';
+import 'package:portfolio/utils/launch_url.dart';
 import 'package:portfolio/widgets/appbar/my_app_bar.dart';
 import 'package:portfolio/widgets/powerd_by_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -79,19 +80,11 @@ class _FooterLinkItem extends StatelessWidget {
 
   final String icon;
   final String link;
-  Future<void> _launchUrl(String projectlink) async {
-    final Uri url = Uri.parse(projectlink);
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $projectlink');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {
-        _launchUrl(link);
-      },
+      onPressed: () => launchAppUrl(link),
       icon: SvgPicture.asset(
         icon,
         colorFilter: ColorFilter.mode(

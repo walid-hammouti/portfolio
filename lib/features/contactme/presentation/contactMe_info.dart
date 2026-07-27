@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:portfolio/extensions.dart';
 import 'package:portfolio/style/app_size.dart';
+import 'package:portfolio/utils/launch_url.dart';
 import 'package:portfolio/widgets/my_footer.dart';
 import 'package:portfolio/widgets/seo_text.dart';
+import 'package:portfolio/widgets/styled_button.dart';
 
 class ContactmeInfo extends StatelessWidget {
   @override
@@ -71,6 +73,14 @@ class ContactmeInfo extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.link, color: context.colorScheme.onBackground),
             title: FooterLinks(arefooterlinks: false),
+          ),
+          Gap(Insets.xl),
+          PrimaryButton(
+            title: context.texts.viewResume,
+            onPressed:
+                () => launchAppUrl(
+                  'https://drive.google.com/file/d/1qJT9jdJarqO9aYZhQenHZs1QFDwv0pQz/view?usp=sharing',
+                ),
           ),
         ],
       ),
